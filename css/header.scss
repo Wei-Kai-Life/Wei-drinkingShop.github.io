@@ -1,0 +1,223 @@
+header {
+    width: 100%;
+    height: 120px;
+    background-image: url("../img/head_background.jpg");
+    position: relative;
+    z-index: 5;
+    @media (max-width: 400px) {
+        display: flex;
+        align-items: center;
+    }
+    .chinese {
+        position: absolute;
+        top: calc(50% - 22.5px);
+        right: 80px;
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        border: 2px white solid;
+        box-sizing: border-box;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        cursor: pointer;
+        transition: 0.3s;
+        @media (max-width: 1400px) {
+            right: 160px;
+        }
+        @media (max-width: 400px) {
+            right: 130px;
+        }
+    }
+    .english {
+        position: absolute;
+        top: calc(50% - 22.5px);
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        border: 2px white solid;
+        box-sizing: border-box;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        cursor: pointer;
+        transition: 0.3s;
+        @media (max-width: 1400px) {
+            right: 100px;
+        }
+        @media (max-width: 400px) {
+            right: 80px;
+        }
+    }
+    .language:hover {
+        background-color: white;
+        color: black;
+        transition: 0.4s;
+    }
+}
+
+.nav-bar {
+    margin: auto;
+    width: 910px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 190px;
+    height: 120px;
+    // background-color: blanchedalmond;
+    @media (max-width: 1400px) {
+        display: none;
+    }
+    .brand {
+        position: absolute;
+        left: 0;
+    }
+    .nav-item {
+        width: 140px;
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        .nav-img {
+            width: 40px;
+            height: 40px;
+        }
+        .title-box {
+            .title {
+                font-size: 1.3em;
+                color: #000;
+                transition: 0.6s;
+            }
+            .title-en {
+                font-size: 1em;
+                color: #977039;
+                transition: 0.6s;
+            }
+        }
+    }
+    .nav-item:hover .title {
+        color: white;
+        transition: 0.4s;
+    }
+    .nav-item:hover .title-en {
+        color: white;
+        transition: 0.4s;
+    }
+    .nav-img.animate {
+        animation: logo-rotate 1s ease-in-out;
+        // transition: 1s;
+    }
+    @keyframes logo-rotate {
+        0% {
+            transform: scaleX(1);
+        }
+        25% {
+            transform: scaleX(0);
+        }
+        50% {
+            transform: scaleX(1);
+        }
+        75% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+    .nav-img.animate2 {
+        animation: logo-rotate2 1s ease-in-out;
+        // transition: 1s;
+    }
+    @keyframes logo-rotate2 {
+        0% {
+            transform: scaleX(1);
+        }
+        25% {
+            transform: scaleX(0);
+        }
+        50% {
+            transform: scaleX(1);
+        }
+        75% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.brand-1300px {
+    display: none;
+    @media (max-width: 1400px) {
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+    }
+
+    img {
+        @media (max-width: 400px) {
+            width: 120px;
+        }
+        @media (max-width: 320px) {
+            width: 80px;
+        }
+    }
+}
+
+.burger-nav {
+    display: none;
+    @media (max-width: 1400px) {
+        display: block;
+        width: 100%;
+        background-image: url("../img/head_background.jpg");
+        // background-color: black;
+        position: absolute;
+        z-index: 3;
+        transform: translateY(-700px);
+        transition: 1s;
+        padding: 20px 0 20px 0;
+    }
+
+    .burger-nav-item {
+        display: flex;
+        margin: 40px;
+        // border: 1px red solid;
+        justify-content: center;
+        .burger-nav-img {
+            width: 40px;
+            height: 40px;
+        }
+        .title-box {
+            width: 110px;
+            // border: 1px solid black;
+            box-sizing: border-box;
+
+            text-align: center;
+            .title {
+                font-size: 1.3em;
+                color: #000;
+            }
+            .title-en {
+                font-size: 1em;
+                color: #977039;
+            }
+        }
+    }
+    .burger-nav-item:nth-child(1) {
+        margin: 0 0 40px 0;
+    }
+    .burger-nav-item:nth-child(7) {
+        margin: 40px 0 0 0;
+    }
+}
+.burger-nav.open {
+    transform: translateY(0px);
+    
+}
+
+.aa {
+    width: 100%;
+    height: 1300px;
+    background-color: wheat;
+}

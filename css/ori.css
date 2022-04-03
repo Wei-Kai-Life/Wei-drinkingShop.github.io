@@ -1,0 +1,250 @@
+@charset "UTF-8";
+#section1 {
+  width: 100%;
+  min-height: 500px;
+  height: calc(100vh - 120px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("../img/head_background.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+#section1 .container {
+  width: 90%;
+  height: 550px;
+  position: relative;
+}
+
+#section1 .container .slider_container {
+  width: 100%;
+  min-height: 500px;
+  height: 100%;
+  background-image: url("../img/bubble_z_slider_background.jpg");
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#section1 .container .slider_container .slider {
+  position: absolute;
+  right: calc(50% - 225px);
+  top: 10px;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+
+#section1 .container .slider_container .slider img {
+  width: 450px;
+}
+
+#section1 .container .slider_container .slider .drink_decoration {
+  position: relative;
+  top: -30px;
+  right: -125px;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  width: 700px;
+}
+
+#section1 .container .slider_container .btn-box .btn {
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#section1 .container .slider_container .btn-box .next {
+  background-image: url("../img/arrow__right-white.png");
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  bottom: 200px;
+  opacity: 0.5;
+}
+
+#section1 .container .slider_container .btn-box .prev {
+  background-image: url("../img/arrow__left-white.png");
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+  bottom: 200px;
+  opacity: 0.5;
+}
+
+#section1 .container .slider_container .btn-box .prev:hover,
+#section1 .container .slider_container .btn-box .next:hover {
+  opacity: 1;
+}
+
+#section1 .container .decoration {
+  width: 170px;
+  height: 57px;
+  background-image: url("../img/head_bottom_img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0px;
+  left: 16px;
+}
+
+#section1 .container .button_line {
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 95%;
+  left: 15%;
+}
+
+#section1 .container .button_line.active {
+  -webkit-animation: progress_bar 6s ease-in-out infinite;
+          animation: progress_bar 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes progress_bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes progress_bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+/* 右邊按鈕動畫 */
+@-webkit-keyframes right-enter {
+  0% {
+    -webkit-transform: rotate(180deg) translateY(-150px);
+            transform: rotate(180deg) translateY(-150px);
+  }
+  98% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+}
+@keyframes right-enter {
+  0% {
+    -webkit-transform: rotate(180deg) translateY(-150px);
+            transform: rotate(180deg) translateY(-150px);
+  }
+  98% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+}
+
+@-webkit-keyframes right-leave {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  98% {
+    -webkit-transform: rotate(-180deg) translateY(-150px);
+            transform: rotate(-180deg) translateY(-150px);
+  }
+  100% {
+    -webkit-transform: rotate(-180deg) translateY(-150px);
+            transform: rotate(-180deg) translateY(-150px);
+  }
+}
+
+@keyframes right-leave {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  98% {
+    -webkit-transform: rotate(-180deg) translateY(-150px);
+            transform: rotate(-180deg) translateY(-150px);
+  }
+  100% {
+    -webkit-transform: rotate(-180deg) translateY(-150px);
+            transform: rotate(-180deg) translateY(-150px);
+  }
+}
+
+/* 左邊按鈕動畫*/
+@-webkit-keyframes left-enter {
+  0% {
+    -webkit-transform: rotate(-180deg) translateY(-150px);
+            transform: rotate(-180deg) translateY(-150px);
+  }
+  98% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+}
+@keyframes left-enter {
+  0% {
+    -webkit-transform: rotate(-180deg) translateY(-150px);
+            transform: rotate(-180deg) translateY(-150px);
+  }
+  98% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+}
+
+@-webkit-keyframes left-leave {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  98% {
+    -webkit-transform: rotate(180deg) translateY(-150px);
+            transform: rotate(180deg) translateY(-150px);
+  }
+  100% {
+    -webkit-transform: rotate(180deg) translateY(-150px);
+            transform: rotate(180deg) translateY(-150px);
+  }
+}
+
+@keyframes left-leave {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0);
+            transform: rotate(0deg) translateY(0);
+  }
+  98% {
+    -webkit-transform: rotate(180deg) translateY(-150px);
+            transform: rotate(180deg) translateY(-150px);
+  }
+  100% {
+    -webkit-transform: rotate(180deg) translateY(-150px);
+            transform: rotate(180deg) translateY(-150px);
+  }
+}
+/*# sourceMappingURL=ori.css.map */

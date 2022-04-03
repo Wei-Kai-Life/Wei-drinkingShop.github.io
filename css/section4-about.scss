@@ -1,0 +1,240 @@
+
+.main_about_background{
+    font-size: 14px;
+    background-image: url('../img/main_about_background.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+   
+    .main_about_decoration1{
+        position: absolute;
+        top: 50px;
+        right: 90px;
+    }
+    .main_about_decoration2{
+        position: absolute;
+        top: 220px;
+        right: 110px;
+    }
+    .main_about_decoration3{
+        position: absolute;
+        bottom: 170px;
+        right: 200px;
+
+    }
+    .main_about_decoration4{
+        position: absolute;
+        bottom: 375px;
+        right: 59%;
+        // width: 60%;
+        text-align: center;
+    }
+    .main_about_decoration5{
+        position: absolute;
+        bottom: 410px;
+        right: 55%;
+        // width: 50%;
+        text-align: center;
+    }
+    .main_about_decoration6{
+        position: absolute;
+        top: -45px;
+        left: 30px;
+    }
+    .main_about_decoration7{
+        position: absolute;
+        bottom: -420px;
+        left: -470px;
+    }
+    .main_about_decoration8{
+        position: absolute;
+        bottom: 70px;
+        left: 30px;
+    }
+    .clear1{
+        height: 50px;
+    }
+    .container{
+        box-sizing: border-box;
+        display: flex;
+        width: 1170px;
+        margin: auto;
+        padding: 0 15px;
+        // background-color: rgb(227, 223, 218);
+        @media (max-width:990px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 750px;
+            padding: 0 15px;
+        }
+        @media (max-width:768px){
+            width: 100%;
+        }
+        .main_about_wrap{
+            // position: relative;
+            width: 49.5%;
+            @media (max-width:990px) {
+                width: 100%;
+            }
+               // 螢幕寬度小於990px時，套用mobile
+            .main_about_title.mobile{
+                display: inline-block;
+                position: relative;
+                padding: 0 10px 0 80px;
+                opacity: 1;
+                left: 0;
+            }
+            .main_about_title.act{
+                animation: section4-move1 0.8s ease-in-out forwards;
+            }
+            @keyframes section4-move1 {
+                form{
+                    opacity: 0;
+                    left: -20px;
+                }
+                to{
+                    opacity: 1;
+                    left: 0;
+                }
+            }
+            .main_about_title{
+                display: inline-block;
+                position: relative;
+                padding: 0 10px 0 80px;
+                opacity: 0;
+                left: -20px;
+                
+                // text-align: left;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .main_about_en{
+                    font-size: 1.2em;
+                    line-height: 25px;
+                    padding: 8px 5px 0 ;
+                    color: #3e210e;
+                }
+                .main_about_ch{
+                    font-size: 2.2em;
+                    font-weight: bold;
+                    line-height: 40px;
+                    padding: 0 5px 8px;
+                    color: #3e210e;
+                }
+            }
+
+               // 螢幕寬度小於990px時，套用mobile
+            .main_about_content1.mobile{
+                font-size: 1.5em;
+                line-height: 2em;
+                font-weight: bold;
+                color: #3e210e;
+                opacity: 1;
+                // position: relative;
+                left: 0;
+            }
+            .main_about_content1{
+                font-size: 1.5em;
+                line-height: 2em;
+                font-weight: bold;
+                color: #3e210e;
+                opacity: 0;
+                position: relative;
+                left: -20px;
+            }
+            .main_about_content1.act{
+                animation: section4-move2 0.8s ease-in-out 0.8s forwards;
+            }
+            @keyframes section4-move2 {
+                form{
+                        opacity: 0;
+                        left: -20px;
+                    }
+                    to{
+                        opacity: 1;
+                        left: 0;
+                    }
+                }
+            .clear2{
+                height: 25px;
+                // background-color: cadetblue;
+                
+            }
+
+            // 螢幕寬度小於990px時，套用mobile
+            .main_about_content2.mobile{
+                font-size: 17px;
+                line-height: 2em;
+                color: #3e210e;
+                opacity: 1;
+                // position: relative;
+                left: 0;
+            }
+            .main_about_content2{
+                font-size: 17px;
+                line-height: 2em;
+                color: #3e210e;
+                opacity: 0;
+                position: relative;
+                left: -20px;
+            }
+            .main_about_content2.act{
+                animation: section4-move3 0.8s ease-in-out 0.8s forwards;
+            }
+            @keyframes section4-move3 {
+                form{
+                        opacity: 0;
+                        left: -20px;
+                    }
+                    to{
+                        opacity: 1;
+                        left: 0;
+                    }
+                }
+        }
+        // 螢幕寬度小於990px時，套用mobile
+        .main_about_img_wrap.mobile{
+            width: 100%;
+            opacity: 1;
+            left: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .main_about_img_wrap{
+            width: 49.5%;
+            position: relative;
+            opacity: 0;
+            left: -20px;
+            img{
+                width: 100%;
+                max-width: 745px;
+            }
+        }
+        .main_about_img_wrap.act{
+            animation: section4-move4 0.8s ease-in-out 1.6s forwards;
+        }
+        @keyframes section4-move4 {
+            form{
+                    opacity: 0;
+                    left: -20px;
+                }
+                to{
+                    opacity: 1;
+                    left: 0;
+                }
+            }
+    }
+}
+.main_about_background_bottom{
+    background-image: url('../img/main_about_background_bottom.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 7.1875vw;
+    z-index: 5;
+}

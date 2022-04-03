@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/burger.css">
+    <!-- <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="./css/section1-swiper.css">
+    <link rel="stylesheet" href="./css/section2-main-title.css">
+    <link rel="stylesheet" href="./css/section3-latest-news.css">
+    <link rel="stylesheet" href="./css/section4-about.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .aaa {
+            cursor: pointer;
+            color: azure;
+        }
+
+        /* html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 1.大於1300px時顯示 -->
+        <div class="nav-bar">
+            <a href="" class="brand">
+                <img src="./img/head_icon.png" alt="The brand of the store">
+            </a>
+            <a href="" class="nav-item">
+                <img src="./img/navi_icon1.png" alt="About us" class="nav-img">
+                <div class="title-box">
+                    <div class="title">關於我們</div>
+                    <div class="title-en">ABOUT US</div>
+                </div>
+            </a>
+            <a href="" class="nav-item">
+                <img src="./img/navi_icon2.png" alt="Latest news" class="nav-img">
+                <div class="title-box">
+                    <div class="title">最新消息</div>
+                    <div class="title-en">NEWS</div>
+                </div>
+            </a>
+            <a href="" class="nav-item">
+                <img src="./img/navi_icon3.png" alt="Introduce of drinks" class="nav-img">
+                <div class="title-box">
+                    <div class="title">茶飲介紹</div>
+                    <div class="title-en">MENU</div>
+                </div>
+            </a>
+            <a href="" class="nav-item">
+                <img src="./img/navi_icon4.png" alt="Introduction to franchise" class="nav-img">
+                <div class="title-box">
+                    <div class="title">加盟簡介</div>
+                    <div class="title-en">AFFILIATE</div>
+                </div>
+
+            </a>
+            <a href="" class="nav-item">
+                <img src="./img/navi_icon5.png" alt="Branch Information" class="nav-img">
+                <div class="title-box">
+                    <div class="title">分店資訊</div>
+                    <div class="title-en">LOCATION</div>
+                </div>
+
+            </a>
+            <a href="" class="nav-item">
+                <img src="./img/navi_icon6.png" alt="Contact us" class="nav-img">
+                <div class="title-box">
+                    <div class="title">聯絡我們</div>
+                    <div class="title-en">CONTACT</div>
+                </div>
+            </a>
+        </div>
+
+
+        <!-- 2.螢幕寬度<1300px時顯示 -->
+        <!-- 2.1品牌img -->
+        <a href="#" class="brand-1300px">
+            <img src="./img/head_icon.png" alt="">
+        </a>
+        <!-- 2.2漢堡條 -->
+        <div id="hamburger" class="hamburglar is-closed">
+
+            <div class="burger-icon">
+                <div class="burger-container">
+                    <span class="burger-bun-top"></span>
+                    <span class="burger-filling"></span>
+                    <span class="burger-bun-bot"></span>
+                </div>
+            </div>
+
+            <!-- svg ring containter -->
+            <div class="burger-ring">
+                <svg class="svg-ring">
+                    <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"
+                        d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                </svg>
+            </div>
+            <!-- the masked path that animates the fill to the ring -->
+
+            <svg width="0" height="0">
+                <mask id="mask">
+                    <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10"
+                        stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                </mask>
+            </svg>
+            <div class="path-burger">
+                <div class="animate-path">
+                    <div class="path-rotation"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="language chinese">中文</div>
+        <div class="language english">EN</div>
+
+    </header>
+    <div class="burger-nav">
+        <a href="" class="burger-nav-item">
+            <img src="./img/navi_icon6.png" alt="HOME" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">首頁</div>
+                <div class="title-en">HOME</div>
+            </div>
+        </a>
+        <a href="" class="burger-nav-item">
+            <img src="./img/navi_icon1.png" alt="About us" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">關於我們</div>
+                <div class="title-en">ABOUT US</div>
+            </div>
+        </a>
+        <a href="" class="burger-nav-item">
+            <img src="./img/navi_icon2.png" alt="NEWS" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">最新消息</div>
+                <div class="title-en">NEWS</div>
+            </div>
+        </a>
+        <a href="" class="burger-nav-item">
+            <img src="./img/navi_icon3.png" alt="MENU" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">茶飲介紹</div>
+                <div class="title-en">MENU</div>
+            </div>
+        </a>
+        <a href="" class="burger-nav-item">
+            <img src="./img/navi_icon4.png" alt="AFFILIATE" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">加盟簡介</div>
+                <div class="title-en">AFFILIATE</div>
+            </div>
+        </a>
+        <a href="" class="burger-nav-item">
+            <img src="./img/navi_icon5.png" alt=LOCATION" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">分店資訊</div>
+                <div class="title-en">LOCATION</div>
+            </div>
+        </a>
+        <a href="" class="burger-nav-item">
+            <img src="./img/navi_icon6.png" alt="CONTACT" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">聯絡我們</div>
+                <div class="title-en">CONTACT</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- 飲料slider -->
+    <div id="app">
+        <section id="section1">
+            <div class="container">
+                <div class="slider_container">
+                    <transition appear :css="false" @before-enter="beforeEnter" @enter="enterHandler"
+                        @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leaveHandler"
+                        @after-leave="afterLeave">
+                        <div class="slider" v-for="item in img1s" :key="item.src" v-if='img_number === item.id '>
+                            <img :src="item.src" :id="item.id" alt="圖片" :class="item.className">
+
+                        </div>
+                    </transition>
+                    <transition appear :css="false" @before-enter="beforeEnter" @enter="enterHandler"
+                        @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leaveHandler"
+                        @after-leave="afterLeave">
+                        <div class="slider" v-for="item in img2s" :key="item.src" v-if='img_number === item.id '>
+                            <img :src="item.src" alt="圖片" :class="item.className">
+
+                        </div>
+                    </transition>
+                    <transition appear :css="false" @before-enter="beforeEnter" @enter="enterHandler"
+                        @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leaveHandler"
+                        @after-leave="afterLeave">
+                        <div class="slider" v-for="item in img3s" :key="item.src" v-if='img_number === item.id '>
+                            <img :src="item.src" alt="圖片" :class="item.className">
+
+                        </div>
+                    </transition>
+
+                    <div class="btn-box">
+                        <div class="btn next" @click="change(1)"></div>
+                        <div class="btn prev" @click="change(-1)"></div>
+                    </div>
+                </div>
+                <div class="decoration"></div>
+                <div class="button_line"></div>
+            </div>
+        </section>
+    </div>
+    <section id="section2">
+        <div class="main_title_gif">
+            <img src="./img/main_title_gif.gif" alt="宣傳圖GIF">
+        </div>
+        <div class="main_title_gif_mobile">
+            <img src="./img/main_title_gif_mobile.gif" alt="宣傳圖GIF">
+        </div>
+    </section>
+
+    <!-- 最新消息section -->
+    <div id="app3">
+        <section id="section3">
+            <div class="latest_news_container">
+                <div v-for="item in latest_news_box"  :class="item.className" >
+                    <!-- 上半部 -->
+                    <div class="main_ad_img_wrap">
+                        <!-- 最新消息廣告大圖示 -->
+                        <img :src="item.imgSrc" alt="main_ad_img">
+                        <!-- hover圖示 -->
+                        <div class="main_ad_img_hover">
+                            <img src="./img/latest_news_pic_hover.png" alt="hover效果圖案">
+                        </div>
+                    </div>
+                    <!-- 下半部 -->
+                    <div class="main_ad_content_wrap">
+                        <div class="main_ad_content_title_wrap">
+                            <div class="main_ad_content_title">最新消息</div>
+                            <div class="main_ad_content_date">
+                                <div class="main_ad_content_date_icon">
+                                    <img src="./img/latest_news_logo.png" alt="最新消息Logo">
+                                </div>
+                                <div class="main_ad_content_date_text">{{item.date}}</div>
+                            </div>
+                        </div>
+                        <div class=" main_ad_content">{{item.content}}</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div id="app4">
+        <section>
+            <div class="main_about_background" >
+                <!-- 背景裝飾物   以下-->
+                <div v-for="item in main_about_decoration" :class="item.className">
+                    <img :src="item.imgSrc" alt="main_about_decoration" :data-depth="item.data_depth">
+                </div>
+                 <!-- 背景裝飾物   以上-->
+                <div class="clear1"></div>
+                <div class="container">
+                    <div class="main_about_wrap">
+                        <div class="main_about_title act">
+                            <img src="./img/main_about_title_icon.png" alt="main_about_title_icon">
+                            <div class="main_about_en">ABOUT US </div>
+                            <div class="main_about_ch">關於阿偉飲品</div>
+                        </div>
+                        <div class="clear2"></div>
+                        <div class="main_about_content1 act">20年來，專精經營的沙場老將</div>
+                        <div class="clear2"></div>
+                        <div class="main_about_content2 act">
+                            熱愛各式各樣的飲品，看到茶飲市場中無限的商機，想突破茶飲市場中，一成不變的操作模式，了無新意的行銷策略。
+                        </div>
+                    </div>
+                    <div class="main_about_img_wrap act">
+                        <img src="./img/main_about_icon.png" alt="main_about_icon">
+                    </div>
+                </div>
+                <div class="clear1"></div>
+            </div>
+            <div class="main_about_background_bottom"></div>
+        </section>
+    </div>
+    
+
+    <section style="width: 100%;height: 200vh;"></section>
+
+
+
+
+    <!-- <script src="./node_modules/swiper/swiper-bundle.min.js"> </script> -->
+
+    <!-- 載入jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+        integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
+        crossorigin='anonymous'>
+        </script>
+
+
+    <!-- 載入Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- parallax.js載入 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <script src="./js/nav_header.js"></script>
+    <script src="./js/burger&burger_nav.js"></script>
+    <script src="./js/section1-slider.js"></script>
+    <script src="./js/section3-latest-news.js"></script>
+    <script src="./js/section4-about.js"></script>
+    <script>
+
+
+
+
+
+   
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

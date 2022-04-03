@@ -1,0 +1,154 @@
+#section1 {
+    width: 100%;
+    min-height: 500px;
+    height: calc(100vh - 120px);
+    box-sizing: border-box;
+    background-image: url("../img/head_background.jpg");
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    .container {
+        width: 90%;
+        height: 550px;
+        position: relative;
+        .slider_container {
+            width: 100%;
+            min-height: 500px;
+            height: 100%;
+            background-image: url("../img/bubble_z_slider_background.jpg");
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            .slider {
+                position: absolute;
+                right: calc(50% - 225px);
+                top: 10px;
+                transform-origin: 50% 100%;
+                img {
+                    width: 450px;
+                    // border: 1px red solid;
+                }
+
+                .drink_decoration {
+                    position: relative;
+                    top: -30px;
+                    right: -125px;
+                    transform-origin: 50% 100%;
+
+                    width: 700px;
+                    // border: 1px white solid;
+                }
+            }
+            .btn-box {
+                .btn {
+                    width: 70px;
+                    height: 70px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .next {
+                    background-image: url("../img/arrow__right-white.png");
+                    cursor: pointer;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 200px;
+                    opacity: 0.5;
+                }
+                .prev {
+                    background-image: url("../img/arrow__left-white.png");
+                    cursor: pointer;
+                    position: absolute;
+                    left: 40px;
+                    bottom: 200px;
+                    opacity: 0.5;
+                }
+                .prev:hover,
+                .next:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .decoration {
+            width: 170px;
+            height: 57px;
+            background-image: url("../img/head_bottom_img.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: 0px;
+            left: 16px;
+        }
+        .button_line {
+            height: 1px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 95%;
+            left: 15%;
+            // bottom: -10px;
+        }
+        .button_line.active {
+            animation: progress_bar 6s ease-in-out infinite;
+        }
+        @keyframes progress_bar {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 75%;
+            }
+        }
+    }
+}
+/* 右邊按鈕動畫 */
+@keyframes right-enter {
+    0% {
+        transform: rotate(180deg) translateY(-150px);
+    }
+    98% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+@keyframes right-leave {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    98% {
+        transform: rotate(-180deg) translateY(-150px);
+    }
+    100% {
+        transform: rotate(-180deg) translateY(-150px);
+    }
+}
+
+/* 左邊按鈕動畫*/
+@keyframes left-enter {
+    0% {
+        transform: rotate(-180deg) translateY(-150px);
+    }
+    98% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+@keyframes left-leave {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    98% {
+        transform: rotate(180deg) translateY(-150px);
+    }
+    100% {
+        transform: rotate(180deg) translateY(-150px);
+    }
+}

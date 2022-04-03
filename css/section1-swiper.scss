@@ -1,0 +1,201 @@
+#section1 {
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url("../img/head_background.jpg");
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    .container {
+        width: 90%;
+        height: 33.33333vw;
+        min-height: 300px;
+        max-height: 550px;
+        position: relative;
+        @media (max-width: 430px) {
+            min-height: 250px;
+        }
+        position: relative;
+        .slider_container {
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/bubble_z_slider_background.jpg");
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            .slider {
+                position: absolute;
+                height: 100%;
+                transform-origin: 50% 100%;
+
+                .drink {
+                    height: 100%;
+                    position: relative;
+                }
+
+                .drink_decoration {
+                    height: 110%;
+                    position: relative;
+                    left: 0;
+                }
+            }
+            .btn-box {
+                .btn {
+                    width: 70px;
+                    height: 70px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    @media (max-width: 500px) {
+                        width: 55px;
+                        height: 55px;
+                    }
+                }
+                .next {
+                    background-image: url("../img/arrow__right-white.png");
+                    cursor: pointer;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 40%;
+                    opacity: 0.5;
+                    @media (max-width: 500px) {
+                        right: 0px;
+                    }
+                }
+                .prev {
+                    background-image: url("../img/arrow__left-white.png");
+                    cursor: pointer;
+                    position: absolute;
+                    left: 40px;
+                    bottom: 40%;
+                    opacity: 0.5;
+                    @media (max-width: 500px) {
+                        left: 0px;
+                    }
+                }
+                .prev:hover,
+                .next:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .decoration {
+            width: 170px;
+            height: 57px;
+            background-image: url("../img/head_bottom_img.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: 0px;
+            left: 16px;
+            @media (max-width: 450px) {
+                width: 150px;
+                left: 0;
+            }
+            @media (max-width: 400px) {
+                width: 100px;
+                left: 0;
+            }
+        }
+        .button_line {
+            height: 1px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 95%;
+            left: 180px;
+            @media (max-width: 450px) {
+                left: 150px;
+            }
+            @media (max-width: 400px) {
+                left: 100px;
+            }
+        }
+        .button_line.active {
+            animation: progress_bar 5s ease-in-out infinite;
+            @media (max-width: 450px) {
+                animation: progress_bar_450px 5s ease-in-out infinite;
+            }
+            @media (max-width: 400px) {
+                animation: progress_bar_400px 5s ease-in-out infinite;
+            }
+        }
+
+        @keyframes progress_bar {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: calc(90% - 180px);
+            }
+        }
+        @keyframes progress_bar_450px {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: calc(90% - 150px);
+            }
+        }
+        @keyframes progress_bar_400px {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: calc(90% - 100px);
+            }
+        }
+    }
+}
+/* 右邊按鈕動畫 */
+@keyframes right-enter {
+    0% {
+        transform: rotate(180deg) translateY(-150px);
+    }
+    98% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+@keyframes right-leave {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    98% {
+        transform: rotate(-180deg) translateY(-150px);
+    }
+    100% {
+        transform: rotate(-180deg) translateY(-150px);
+    }
+}
+
+/* 左邊按鈕動畫*/
+@keyframes left-enter {
+    0% {
+        transform: rotate(-180deg) translateY(-150px);
+    }
+    98% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+@keyframes left-leave {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    98% {
+        transform: rotate(180deg) translateY(-150px);
+    }
+    100% {
+        transform: rotate(180deg) translateY(-150px);
+    }
+}
