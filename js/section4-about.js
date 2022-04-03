@@ -2,42 +2,42 @@ let data4 = {
     main_about_decoration: [
         {
             className: 'main_about_decoration main_about_decoration1 layer',
-            imgSrc: '../img/main_about_decoration1.png',
+            imgSrc: './img/main_about_decoration1.png',
             data_depth:3
         },
         {
             className: 'main_about_decoration main_about_decoration2 layer',
-            imgSrc: '../img/main_about_decoration2.png',
+            imgSrc: './img/main_about_decoration2.png',
             data_depth:1
         },
         {
             className: 'main_about_decoration main_about_decoration3 layer',
-            imgSrc: '../img/main_about_decoration3.png',
+            imgSrc: './img/main_about_decoration3.png',
             data_depth:12
         },
         {
             className: 'main_about_decoration main_about_decoration4 layer',
-            imgSrc: '../img/main_about_decoration4.png',
+            imgSrc: './img/main_about_decoration4.png',
             data_depth:15
         },
         {
             className: 'main_about_decoration main_about_decoration5 layer',
-            imgSrc: '../img/main_about_decoration5.png',
+            imgSrc: './img/main_about_decoration5.png',
             data_depth:6
         },
         {
             className: 'main_about_decoration main_about_decoration6 layer',
-            imgSrc: '../img/main_about_decoration6.png',
+            imgSrc: './img/main_about_decoration6.png',
             data_depth:8
         },
         {
             className: 'main_about_decoration main_about_decoration7 layer',
-            imgSrc: '../img/main_about_decoration7.png',
+            imgSrc: './img/main_about_decoration7.png',
             data_depth:0.5
         },
         {
             className: 'main_about_decoration main_about_decoration8 layer',
-            imgSrc: '../img/main_about_decoration8.png',
+            imgSrc: './img/main_about_decoration8.png',
             data_depth:3
         },
     ]

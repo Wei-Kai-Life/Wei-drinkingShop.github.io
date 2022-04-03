@@ -3,21 +3,21 @@ let data3 = {
         {
             id: 0,
             className: 'latest_news_box latest_news_box1',
-            imgSrc: '../img/latest_news_pic1.jpg',
+            imgSrc: './img/latest_news_pic1.jpg',
             date: '2022/03/23',
             content: '新店開幕!!!'
         },
         {
             id: 1,
             className: 'latest_news_box latest_news_box2',
-            imgSrc: '../img/latest_news_pic2.jpg',
+            imgSrc: './img/latest_news_pic2.jpg',
             date: '2022/02/22',
             content: '大里塗城二店價格調整敬請包涵'
         },
         {
             id: 2,
             className: 'latest_news_box latest_news_box3',
-            imgSrc: '../img/latest_news_pic3.jpg',
+            imgSrc: './img/latest_news_pic3.jpg',
             date: '2022/03/23',
             content: '新年到!賀新年!BubbleZ阿偉飲品新年營業時間'
         }
