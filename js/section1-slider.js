@@ -1,5 +1,5 @@
 // vue
-let data1 = {
+let data2 = {
     img_number: 0,
     direction: null,
     set_auto_play: null,
@@ -72,9 +72,9 @@ let data1 = {
         },
     ]
 }
-let vm1 = new Vue({
-    el: '#app',
-    data: data1,
+let vm2 = new Vue({
+    el: '#app2',
+    data: data2,
     mounted() {
         // 自動輪播
         this.auto()
@@ -191,18 +191,18 @@ let vm1 = new Vue({
 
 var toggletime = -1
 window.addEventListener('visibilitychange', () => {
-    var img1s_length = vm1.$data.img1s.length
+    var img1s_length = vm2.$data.img1s.length
     toggletime++
 
     // 跳出頁面時
     if (toggletime % 2 === 0) {
-        vm1.clearAuto()
-        vm1.$data.img_number = (vm1.$data.img_number + img1s_length - 1) % img1s_length
+        vm2.clearAuto()
+        vm2.$data.img_number = (vm2.$data.img_number + img1s_length - 1) % img1s_length
 
         // 跳回頁面時
     } else if (toggletime % 2 === 1) {
-        vm1.auto()
-        vm1.$data.img_number = (vm1.$data.img_number + img1s_length + 1) % img1s_length
+        vm2.auto()
+        vm2.$data.img_number = (vm2.$data.img_number + img1s_length + 1) % img1s_length
         // 例外顯示
     } else {
         console.log('錯誤');

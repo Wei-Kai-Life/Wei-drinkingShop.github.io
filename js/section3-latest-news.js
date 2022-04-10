@@ -23,52 +23,39 @@ let data3 = {
         }
     ]
 }
-
 let vm3 = new Vue({
     el: '#app3',
     data: data3,
     mounted() {
         // 監聽視窗大小來開啟與關閉 latest_news_box 的動畫效果
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        var latest_news_box1 = window.document.querySelector('.latest_news_box1')
-        var latest_news_box2 = window.document.querySelector('.latest_news_box2')
-        var latest_news_box3 = window.document.querySelector('.latest_news_box3')
-        window.addEventListener('scroll', imgHandler, false)
-        function imgHandler() {
-            if (window.innerWidth > 990) {
-                latest_news_box1.classList.remove('mobile')
-                latest_news_box2.classList.remove('mobile')
-                latest_news_box3.classList.remove('mobile')
-                if (window.scrollY < 200) {
-                    latest_news_box1.classList.remove('act')
-                    latest_news_box2.classList.remove('act')
-                    latest_news_box3.classList.remove('act')
-                }
-        
-                if (window.scrollY > 200) {
-                    latest_news_box1.classList.add('act')
-                    latest_news_box2.classList.add('act')
-                    latest_news_box3.classList.add('act')
-                }
-                if (window.scrollY > 1250) {
-                    latest_news_box1.classList.remove('act')
-                    latest_news_box2.classList.remove('act')
-                    latest_news_box3.classList.remove('act')
-                }
-            } else {
-                window.removeEventListener('scroll', imgHandler)
-                latest_news_box1.classList.remove('act')
-                latest_news_box2.classList.remove('act')
-                latest_news_box3.classList.remove('act')
-                latest_news_box1.classList.add('mobile')
-                latest_news_box2.classList.add('mobile')
-                latest_news_box3.classList.add('mobile')
-        
-            }
-        }
-        window.addEventListener('resize', () => {
-            window.addEventListener('scroll', imgHandler)
-        })
+        // var latest_news_boxes = document.querySelectorAll('.latest_news_box')
+        // latest_news_boxes.forEach((item, index) => {
+        //     var latest_news_box = latest_news_boxes[index]
+        //     window.addEventListener('scroll', imgHandler, false)
+        //     function imgHandler() {
+
+        //         if (window.innerWidth > 990) {
+        //             latest_news_box.classList.remove('mobile')
+        //             if (window.scrollY <= 300) {
+        //                 latest_news_box.classList.remove('act')
+        //             }
+        //             if (window.scrollY > 300) {
+        //                 latest_news_box.classList.add('act')
+        //             }
+        //             if (window.scrollY >= 1250) {
+        //                 latest_news_box.classList.remove('act')
+        //             }
+        //         } else {
+        //             window.removeEventListener('scroll', imgHandler)
+        //             latest_news_box.classList.remove('act')
+        //             latest_news_box.classList.add('mobile')
+        //         }
+        //     }
+        //     window.addEventListener('resize', () => {
+        //         window.addEventListener('scroll', imgHandler)
+        //     })
+        // })
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     }
 })

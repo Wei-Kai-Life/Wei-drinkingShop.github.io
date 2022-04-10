@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/section2-main-title.css">
     <link rel="stylesheet" href="./css/section3-latest-news.css">
     <link rel="stylesheet" href="./css/section4-about.css">
+    <link rel="stylesheet" href="./css/section5-earth.css">
     <style>
         body {
             margin: 0;
@@ -20,33 +21,31 @@
 
         a {
             text-decoration: none;
-
         }
 
-        .aaa {
-            cursor: pointer;
-            color: azure;
-        }
-
-        /* html,
-        body {
+        #app {
             position: relative;
-            height: 100%;
         }
 
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        } */
+        .scrolled {
+            position: fixed;
+            z-index: 9;
+            left: 30px;
+            top: 30px;
+            background-color: black;
+            color: aliceblue;
+        }
     </style>
 </head>
 
 <body>
-    <header>
+    <div id="app">
+        <div class="scrolled">ScrollY : {{scrolled}}</div>
+    </div>
+
+
+
+    <header id="header">
         <!-- 1.大於1300px時顯示 -->
         <div class="nav-bar">
             <a href="" class="brand">
@@ -195,7 +194,7 @@
     </div>
 
     <!-- 飲料slider -->
-    <div id="app">
+    <div id="app2">
         <section id="section1">
             <div class="container">
                 <div class="slider_container">
@@ -247,7 +246,7 @@
     <div id="app3">
         <section id="section3">
             <div class="latest_news_container">
-                <div v-for="item in latest_news_box"  :class="item.className" >
+                <div v-for="item in latest_news_box" :class="item.className">
                     <!-- 上半部 -->
                     <div class="main_ad_img_wrap">
                         <!-- 最新消息廣告大圖示 -->
@@ -274,31 +273,31 @@
             </div>
         </section>
     </div>
-    
+
     <div id="app4">
         <section>
-            <div class="main_about_background" >
+            <div class="main_about_background">
                 <!-- 背景裝飾物   以下-->
                 <div v-for="item in main_about_decoration" :class="item.className">
                     <img :src="item.imgSrc" alt="main_about_decoration" :data-depth="item.data_depth">
                 </div>
-                 <!-- 背景裝飾物   以上-->
+                <!-- 背景裝飾物   以上-->
                 <div class="clear1"></div>
                 <div class="container">
                     <div class="main_about_wrap">
-                        <div class="main_about_title act">
+                        <div class="main_about_title app4_animation">
                             <img src="./img/main_about_title_icon.png" alt="main_about_title_icon">
                             <div class="main_about_en">ABOUT US </div>
                             <div class="main_about_ch">關於阿偉飲品</div>
                         </div>
                         <div class="clear2"></div>
-                        <div class="main_about_content1 act">20年來，專精經營的沙場老將</div>
+                        <div class="main_about_content1 app4_animation">20年來，專精經營的沙場老將</div>
                         <div class="clear2"></div>
-                        <div class="main_about_content2 act">
+                        <div class="main_about_content2 app4_animation">
                             熱愛各式各樣的飲品，看到茶飲市場中無限的商機，想突破茶飲市場中，一成不變的操作模式，了無新意的行銷策略。
                         </div>
                     </div>
-                    <div class="main_about_img_wrap act">
+                    <div class="main_about_img_wrap app4_animation">
                         <img src="./img/main_about_icon.png" alt="main_about_icon">
                     </div>
                 </div>
@@ -307,7 +306,54 @@
             <div class="main_about_background_bottom"></div>
         </section>
     </div>
-    
+
+
+
+
+
+    <div id="app5">
+        <section>
+            <div class="earth_background">
+                <div class="earth_background_shadow">
+                    <div style="clear:both;height: 7.1875vw;"></div>
+                    <div style="clear:both;height: 50px;"></div>
+                    <div class="container">
+                        <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1110 700"
+                            style="enable-background:new 0 0 1110 700;" xml:space="preserve">
+                            <g>
+                                <!-- 地球 -->
+                                <image class="earth app5_animation" style="overflow:visible;"
+                                    xlink:href="./img/section5_earth.png" />
+                                <!-- 草 -->
+                                <image v-for="item in grasses" :class="item.className" style="overflow:visible;"
+                                    :xlink:href="item.image" />
+                                <!-- 曲線 -->
+                                <path v-for="item in curves" :class="item.className" :d="item.d" />
+
+                                <!-- 線 -->
+                                <line v-for="item in lines" :class="item.className" :x1="item.x1" :y1="item.y1"
+                                    :x2="item.x2" :y2="item.y2" />
+
+                                <!-- 字加框框 -->
+                                <g v-for="item in groups" :class="item.gClassName">
+                                    <ellipse :class="item.ellipseClassName" :cx="item.cx" :cy="item.cy" rx="59" ry="52"
+                                        stroke-width="3" />
+                                    <circle :class="item.circleClassName" :cx="item.cx" :cy="item.cy" r="52"
+                                        stroke-width="1.5" />
+                                    <text :transform="item.matrix" :class="item.textClassName">{{item.text}}</text>
+                                </g>
+                                <text transform="matrix(1 0 0 1 358.2715 527.8682)"
+                                    class="svg_text">品質堅持，台灣茶飄香全世界</text>
+                                <line class="line" x1="353.2715" y1="535.8682" x2="761.1" y2="535.8682" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div style="clear:both;height: 50px;"></div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <section style="width: 100%;height: 200vh;"></section>
 
@@ -329,18 +375,22 @@
     <!-- parallax.js載入 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
+    <script src="./js/app.js"></script>
     <script src="./js/nav_header.js"></script>
     <script src="./js/burger&burger_nav.js"></script>
     <script src="./js/section1-slider.js"></script>
     <script src="./js/section3-latest-news.js"></script>
     <script src="./js/section4-about.js"></script>
+    <script src="./js/section5-earth.js"></script>
+    <!-- <script src="./js/scroll.js"></script> -->
+    <script src="./js/scroll.js"></script>
     <script>
 
 
 
 
 
-   
+
 
 
 

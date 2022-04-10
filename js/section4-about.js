@@ -42,69 +42,43 @@ let data4 = {
         },
     ]
 }
-
 let vm4 = new Vue({
     el: '#app4',
     data: data4,
     mounted() {
+       
         // 監聽視窗大小來開啟與關閉 latest_news_box 的動畫效果
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // var app4_animations = document.querySelectorAll('.app4_animation')
+        // app4_animations.forEach((item,index)=>{
+        //     var app4_animation = app4_animations[index]
+        //     window.addEventListener('scroll', section4Handler, false)
+        // function section4Handler() {
+        //     if (window.innerWidth > 990) {
+        //         app4_animation.classList.remove('mobile')
+        //         if (window.scrollY <= 700) {
+        //             app4_animation.classList.remove('act')
+        //         }
 
-        var main_about_title = window.document.querySelector('.main_about_title')
-        var main_about_content1 = window.document.querySelector('.main_about_content1')
-        var main_about_content2 = window.document.querySelector('.main_about_content2')
-        var main_about_img_wrap = window.document.querySelector('.main_about_img_wrap')
-        window.addEventListener('scroll', section4Handler, false)
-        function section4Handler() {
-            // if(window.scrollY>1800){
-            //     alert('123')
-            // }
-            if (window.innerWidth > 990) {
-                main_about_title.classList.remove('mobile')
-                main_about_content1.classList.remove('mobile')
-                main_about_content2.classList.remove('mobile')
-                main_about_img_wrap.classList.remove('mobile')
-                if (window.scrollY < 700) {
-                    main_about_title.classList.remove('act')
-                    main_about_content1.classList.remove('act')
-                    main_about_content2.classList.remove('act')
-                    main_about_img_wrap.classList.remove('act')
-                }
-
-                if (window.scrollY > 700) {
-                    main_about_title.classList.add('act')
-                    main_about_content1.classList.add('act')
-                    main_about_content2.classList.add('act')
-                    main_about_img_wrap.classList.add('act')
-                }
-                if (window.scrollY > 1800) {
-                    main_about_title.classList.remove('act')
-                    main_about_content1.classList.remove('act')
-                    main_about_content2.classList.remove('act')
-                    main_about_img_wrap.classList.remove('act')
-                }
-            } else {
-                window.removeEventListener('scroll', section4Handler)
-                main_about_title.classList.remove('act')
-                main_about_content1.classList.remove('act')
-                main_about_content2.classList.remove('act')
-                main_about_img_wrap.classList.remove('act')
-                main_about_title.classList.add('mobile')
-                main_about_content1.classList.add('mobile')
-                main_about_content2.classList.add('mobile')
-                main_about_img_wrap.classList.add('mobile')
-
-            }
-        }
-        window.addEventListener('resize', () => {
-            window.addEventListener('scroll', section4Handler)
-        })
+        //         if (window.scrollY > 700) {
+        //             app4_animation.classList.add('act')
+        //         }
+        //         if (window.scrollY >= 1800) {
+        //             app4_animation.classList.remove('act')
+        //         }
+        //     } else {
+        //         window.removeEventListener('scroll', section4Handler)
+        //         app4_animation.classList.remove('act')
+        //         app4_animation.classList.add('mobile')
+        //     }
+        // }
+        // window.addEventListener('resize', () => {
+        //     window.addEventListener('scroll', section4Handler)
+        // })
+        // })
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     }
 })
-
-
-
 var main_about_decoration1 = document.querySelector('.main_about_decoration1')
 var main_about_decoration2 = document.querySelector('.main_about_decoration2')
 var main_about_decoration3 = document.querySelector('.main_about_decoration3')

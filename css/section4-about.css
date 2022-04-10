@@ -1,4 +1,8 @@
-.main_about_background {
+#app4 {
+  height: auto;
+}
+
+#app4 .main_about_background {
   font-size: 14px;
   background-image: url("../img/main_about_background.jpg");
   background-position: bottom center;
@@ -6,63 +10,64 @@
   background-size: cover;
   overflow: hidden;
   position: relative;
+  z-index: 5;
 }
 
-.main_about_background .main_about_decoration1 {
+#app4 .main_about_background .main_about_decoration1 {
   position: absolute;
   top: 50px;
   right: 90px;
 }
 
-.main_about_background .main_about_decoration2 {
+#app4 .main_about_background .main_about_decoration2 {
   position: absolute;
   top: 220px;
   right: 110px;
 }
 
-.main_about_background .main_about_decoration3 {
+#app4 .main_about_background .main_about_decoration3 {
   position: absolute;
   bottom: 170px;
   right: 200px;
 }
 
-.main_about_background .main_about_decoration4 {
+#app4 .main_about_background .main_about_decoration4 {
   position: absolute;
   bottom: 375px;
   right: 59%;
   text-align: center;
 }
 
-.main_about_background .main_about_decoration5 {
+#app4 .main_about_background .main_about_decoration5 {
   position: absolute;
   bottom: 410px;
   right: 55%;
   text-align: center;
 }
 
-.main_about_background .main_about_decoration6 {
+#app4 .main_about_background .main_about_decoration6 {
   position: absolute;
   top: -45px;
   left: 30px;
 }
 
-.main_about_background .main_about_decoration7 {
+#app4 .main_about_background .main_about_decoration7 {
   position: absolute;
   bottom: -420px;
   left: -470px;
 }
 
-.main_about_background .main_about_decoration8 {
+#app4 .main_about_background .main_about_decoration8 {
   position: absolute;
   bottom: 70px;
   left: 30px;
 }
 
-.main_about_background .clear1 {
+#app4 .main_about_background .clear1 {
   height: 50px;
 }
 
-.main_about_background .container {
+#app4 .main_about_background .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -74,7 +79,7 @@
 }
 
 @media (max-width: 990px) {
-  .main_about_background .container {
+  #app4 .main_about_background .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -91,30 +96,22 @@
 }
 
 @media (max-width: 768px) {
-  .main_about_background .container {
+  #app4 .main_about_background .container {
     width: 100%;
   }
 }
 
-.main_about_background .container .main_about_wrap {
+#app4 .main_about_background .container .main_about_wrap {
   width: 49.5%;
 }
 
 @media (max-width: 990px) {
-  .main_about_background .container .main_about_wrap {
+  #app4 .main_about_background .container .main_about_wrap {
     width: 100%;
   }
 }
 
-.main_about_background .container .main_about_wrap .main_about_title.mobile {
-  display: inline-block;
-  position: relative;
-  padding: 0 10px 0 80px;
-  opacity: 1;
-  left: 0;
-}
-
-.main_about_background .container .main_about_wrap .main_about_title.act {
+#app4 .main_about_background .container .main_about_wrap .main_about_title.act {
   -webkit-animation: section4-move1 0.8s ease-in-out forwards;
           animation: section4-move1 0.8s ease-in-out forwards;
 }
@@ -141,7 +138,7 @@
   }
 }
 
-.main_about_background .container .main_about_wrap .main_about_title {
+#app4 .main_about_background .container .main_about_wrap .main_about_title {
   display: inline-block;
   position: relative;
   padding: 0 10px 0 80px;
@@ -149,20 +146,27 @@
   left: -20px;
 }
 
-.main_about_background .container .main_about_wrap .main_about_title img {
+@media (max-width: 990px) {
+  #app4 .main_about_background .container .main_about_wrap .main_about_title {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+#app4 .main_about_background .container .main_about_wrap .main_about_title img {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.main_about_background .container .main_about_wrap .main_about_title .main_about_en {
+#app4 .main_about_background .container .main_about_wrap .main_about_title .main_about_en {
   font-size: 1.2em;
   line-height: 25px;
   padding: 8px 5px 0;
   color: #3e210e;
 }
 
-.main_about_background .container .main_about_wrap .main_about_title .main_about_ch {
+#app4 .main_about_background .container .main_about_wrap .main_about_title .main_about_ch {
   font-size: 2.2em;
   font-weight: bold;
   line-height: 40px;
@@ -170,16 +174,7 @@
   color: #3e210e;
 }
 
-.main_about_background .container .main_about_wrap .main_about_content1.mobile {
-  font-size: 1.5em;
-  line-height: 2em;
-  font-weight: bold;
-  color: #3e210e;
-  opacity: 1;
-  left: 0;
-}
-
-.main_about_background .container .main_about_wrap .main_about_content1 {
+#app4 .main_about_background .container .main_about_wrap .main_about_content1 {
   font-size: 1.5em;
   line-height: 2em;
   font-weight: bold;
@@ -189,7 +184,14 @@
   left: -20px;
 }
 
-.main_about_background .container .main_about_wrap .main_about_content1.act {
+@media (max-width: 990px) {
+  #app4 .main_about_background .container .main_about_wrap .main_about_content1 {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+#app4 .main_about_background .container .main_about_wrap .main_about_content1.act {
   -webkit-animation: section4-move2 0.8s ease-in-out 0.8s forwards;
           animation: section4-move2 0.8s ease-in-out 0.8s forwards;
 }
@@ -216,19 +218,11 @@
   }
 }
 
-.main_about_background .container .main_about_wrap .clear2 {
+#app4 .main_about_background .container .main_about_wrap .clear2 {
   height: 25px;
 }
 
-.main_about_background .container .main_about_wrap .main_about_content2.mobile {
-  font-size: 17px;
-  line-height: 2em;
-  color: #3e210e;
-  opacity: 1;
-  left: 0;
-}
-
-.main_about_background .container .main_about_wrap .main_about_content2 {
+#app4 .main_about_background .container .main_about_wrap .main_about_content2 {
   font-size: 17px;
   line-height: 2em;
   color: #3e210e;
@@ -237,7 +231,14 @@
   left: -20px;
 }
 
-.main_about_background .container .main_about_wrap .main_about_content2.act {
+@media (max-width: 990px) {
+  #app4 .main_about_background .container .main_about_wrap .main_about_content2 {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+#app4 .main_about_background .container .main_about_wrap .main_about_content2.act {
   -webkit-animation: section4-move3 0.8s ease-in-out 0.8s forwards;
           animation: section4-move3 0.8s ease-in-out 0.8s forwards;
 }
@@ -264,31 +265,33 @@
   }
 }
 
-.main_about_background .container .main_about_img_wrap.mobile {
-  width: 100%;
-  opacity: 1;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.main_about_background .container .main_about_img_wrap {
+#app4 .main_about_background .container .main_about_img_wrap {
   width: 49.5%;
   position: relative;
   opacity: 0;
   left: -20px;
 }
 
-.main_about_background .container .main_about_img_wrap img {
+@media (max-width: 990px) {
+  #app4 .main_about_background .container .main_about_img_wrap {
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#app4 .main_about_background .container .main_about_img_wrap img {
   width: 100%;
   max-width: 745px;
 }
 
-.main_about_background .container .main_about_img_wrap.act {
+#app4 .main_about_background .container .main_about_img_wrap.act {
   -webkit-animation: section4-move4 0.8s ease-in-out 1.6s forwards;
           animation: section4-move4 0.8s ease-in-out 1.6s forwards;
 }
@@ -315,12 +318,13 @@
   }
 }
 
-.main_about_background_bottom {
+#app4 .main_about_background_bottom {
   background-image: url("../img/main_about_background_bottom.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   height: 7.1875vw;
+  position: relative;
   z-index: 5;
 }
 /*# sourceMappingURL=section4-about.css.map */

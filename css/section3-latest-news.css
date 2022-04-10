@@ -49,11 +49,6 @@
   }
 }
 
-#section3 .latest_news_container .latest_news_box.mobile {
-  opacity: 1;
-  left: 0;
-}
-
 #section3 .latest_news_container .latest_news_box1.act {
   -webkit-animation: move1 1s ease-in-out normal forwards;
           animation: move1 1s ease-in-out normal forwards;
@@ -158,6 +153,8 @@
     width: 75vw;
     height: auto;
     min-width: 250px;
+    opacity: 1;
+    left: 0;
   }
 }
 
