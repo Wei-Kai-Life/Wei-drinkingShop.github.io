@@ -204,23 +204,31 @@ var scrollHandler = function () {
         var wwidth = window.innerWidth
         if(dwidth !== wwidth){
             dwidth = wwidth
-            scrollHandler()
+            if(window.innerWidth < 767){
+                ($('.mobile_drink')).each(function(){
+                    $(this).bind('load',function(){
+                        scrollHandler()
+                    })
+                })
+            }else{
+                scrollHandler()
+            }
         }
         // window.removeEventListener('scroll', heightFilter)
         
     }
 
     window.addEventListener('resize', debounce2(handle2, 1000))
-
-
-
-
-
 }
-
-
-scrollHandler()
-
+if(window.innerWidth < 767){
+    ($('.mobile_drink')).each(function(){
+        $(this).bind('load',function(){
+            scrollHandler()
+        })
+    })
+}else{
+    scrollHandler()
+}
 
 
 

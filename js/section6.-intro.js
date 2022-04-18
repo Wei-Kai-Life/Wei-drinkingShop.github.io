@@ -189,7 +189,11 @@ let vm6 = new Vue({
     el: '#app6',
     data: data6,
     mounted() {
+       
+        
         if (window.innerWidth < 767) {
+       
+
             window.onload = function () {
                 // 抓取寬度給予每一個 mobile_slider6
                 this.slider_mobile_width = document.querySelector('.slider_container6_mobile').clientWidth / 3
