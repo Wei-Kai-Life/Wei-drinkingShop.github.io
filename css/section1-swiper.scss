@@ -36,11 +36,33 @@
                     height: 100%;
                     position: relative;
                 }
-
+                .drink_text{
+                    display: block;
+                    color: white;
+                    font-family: 'Molle', cursive;
+                    position: relative;
+                    top: 50%;
+                    transform: rotate(-8deg);
+                    font-size: 80px;
+                    @media (max-width:990px) {
+                        font-size: 50px;
+                    }
+                    @media (max-width:767px) {
+                        font-size: 10vw;
+                    }
+                   
+                }
                 .drink_decoration {
                     height: 110%;
                     position: relative;
                     left: 0;
+                    transform: matrix(1,0,0,1,0,-50);
+                }
+                .drink_decoration2{
+                    height: 110%;
+                    position: relative;
+                    left: 0;
+                    transform: matrix(1,0,0,1,0,20);
                 }
             }
             .btn-box {

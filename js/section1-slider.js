@@ -35,7 +35,7 @@ let data2 = {
         // 圖片1
         {
             id: 0,
-            className: 'drink_decoration',
+            className: 'drink_decoration2',
             src: './img/bubble_z_icon1_1.png'
         },
         // 圖片2
@@ -61,14 +61,34 @@ let data2 = {
         // 圖片2
         {
             id: 1,
-            className: 'drink_decoration',
+            className: 'drink_decoration2',
             src: './img/bubble_z_icon2_1.png'
         },
         // 圖片3
         {
             id: 2,
-            className: 'drink_decoration',
+            className: 'drink_decoration2',
             src: './img/bubble_z_icon3_1.png'
+        },
+    ],
+    img4s: [
+        // 圖片1
+        {
+            id: 0,
+            className: 'drink_text',
+            content:'Fresh fruit tea'
+        },
+        // 圖片2
+        {
+            id: 1,
+            className: 'drink_text',
+            content:'Pearl milk tea'
+        },
+        // 圖片3
+        {
+            id: 2,
+            className: 'drink_text',
+            content:'Au lait with sea salt'
         },
     ]
 }
@@ -117,7 +137,7 @@ let vm2 = new Vue({
                         clearInterval(this.btn_limit_time)
                     }
                     // 秒數建議跟 el.style.animationDuration 一樣 (目前設為不同)
-                }, 700)
+                }, 1000)
             }
             // 自動換圖片
             this.clearAuto()
@@ -189,26 +209,29 @@ let vm2 = new Vue({
     },
 })
 
-var toggletime = -1
-window.addEventListener('visibilitychange', () => {
-    var img1s_length = vm2.$data.img1s.length
-    toggletime++
 
-    // 跳出頁面時
-    if (toggletime % 2 === 0) {
-        vm2.clearAuto()
-        vm2.$data.img_number = (vm2.$data.img_number + img1s_length - 1) % img1s_length
+// 跳出頁面時停止動作 以節省效能~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// (此功能目前放在section6-intro.js 一起做使用)
 
-        // 跳回頁面時
-    } else if (toggletime % 2 === 1) {
-        vm2.auto()
-        vm2.$data.img_number = (vm2.$data.img_number + img1s_length + 1) % img1s_length
-        // 例外顯示
-    } else {
-        console.log('錯誤');
-    }
-})
+// var toggletime = -1
+// window.addEventListener('visibilitychange', () => {
+//     var img1s_length = vm2.$data.img1s.length
+//     toggletime++
 
+//     // 跳出頁面時
+//     if (toggletime % 2 === 0) {
+//         vm2.clearAuto()
+//         vm2.$data.img_number = (vm2.$data.img_number + img1s_length - 1) % img1s_length
+
+//         // 跳回頁面時
+//     } else if (toggletime % 2 === 1) {
+//         vm2.auto()
+//         vm2.$data.img_number = (vm2.$data.img_number + img1s_length + 1) % img1s_length
+//         // 例外顯示
+//     } else {
+//         console.log('錯誤');
+//     }
+// })
 
 
 

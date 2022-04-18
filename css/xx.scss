@@ -1,0 +1,35 @@
+.slider_container6_mobile{
+    margin: auto;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    width: 600px;
+    position: relative;
+    //  height 由 js 控制
+
+    .mobile_slider6{
+     position: absolute;
+    //  width 由 js 控制
+    
+    }
+    .mobile_drink{
+        width: 100%;
+        
+    }
+}
+
+
+.mobile_slider6_0{
+    transform: translate(-100%);
+}
+.mobile_slider6_1{
+    transform: translate(0);
+}
+.mobile_slider6_2{
+    transform: translate(100%);
+}
+.mobile_slider6_3{
+    transform: translate(200%);
+}
+.mobile_slider6_4{
+    transform: translate(300%);
+}

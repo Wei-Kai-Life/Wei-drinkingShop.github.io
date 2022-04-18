@@ -1,0 +1,1204 @@
+#app6{
+    section{
+        .into_background{
+            position: relative;
+            background-image: url('../img/main_about_background.jpg');
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            overflow: hidden;
+            .container{
+                box-sizing: border-box;
+                width: 1170px;
+                margin: auto;
+                @media (max-width:1200px) {
+                    width: 970px;
+                }
+                @media (max-width:990px) {
+                    width: 750px;
+                }
+                @media (max-width:767px) {
+                    padding: 0 15px;
+                    width: 100%;
+                }
+                .intro_title_bar{
+                    width: 100%;
+                    text-align: center;
+                    .intro_title_wrap{
+                        display: inline-block;
+                        position: relative;
+                        padding: 0 10px 0 88px;
+                        text-align: left;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 71px;
+                            height: 88px;
+                        }
+                        .intro_en{
+                            color: #3e210e;
+                            font-size: 1.2em;
+                            line-height: 25px;
+                            padding: 8px 5px 0;
+                        }
+                         .intro_ch{
+                            color: #3e210e;
+                            font-size: 2.2em;
+                            font-weight: bold;
+                            line-height: 40px;
+                            padding: 0 0 8px;
+                        }
+                    }
+                    .intro_content_wrap{
+                        position: relative;
+                        box-sizing: border-box;
+                        
+                        .intro_info_container{
+                            display: inline-block;
+                            position: absolute;
+                            box-sizing: border-box;
+                            bottom: 65%;
+                            right: 0;
+                            width: 100%;
+                            padding-left: 20%;
+                            text-align: left;
+                            z-index: 5;
+                            @media (max-width:767px) {
+                                bottom: 60%;
+                                padding: 0;
+                            }
+                            @media (max-width:450px) {
+                                bottom: 45%;
+                            }
+                            @media (max-width:350px) {
+                                bottom: 35%;
+                            }
+                            @media (max-width:300px) {
+                                bottom: 25%;
+                            }
+                            .intro_info_wrap{
+                               width: 80%;
+                               @media (max-width:767px) {
+                                width: 90%;
+                            }
+                                .title_bar{
+                                    display: flex;
+                                    position: relative;
+                                    opacity: 0;
+                                    right: 40px;
+                                    .decorain{
+                                        display: inline-block;
+                                        width: 36px;
+                                        height: 52px;
+                                        transform-origin:(center bottom);
+                                        transform: rotate(15deg);
+                                        animation: decorainShake 2s infinite linear;
+                                    }
+                                  @keyframes decorainShake {
+                                      0%{
+                                        transform: rotate(10deg);
+                                      }
+                                      50%{
+                                        transform: rotate(-18deg);
+                                      }
+                                      100%{
+                                        transform: rotate(10deg);
+                                      }
+                                  }
+                                    .title{
+                                        font-size: 24px;
+                                        font-weight: bold;
+                                        color: #3e210e;
+                                        line-height: 52px;
+                                        padding: 8px 0 8px 10px;
+                                      
+                                    }
+                                }
+                                .title_bar.act{
+                                    animation: title_bar 1s ease-in-out forwards 2.2s;
+                                }
+                                @keyframes title_bar {
+                                    form{
+                                        opacity: 0;
+                                        right: 40px;
+                                    }
+                                    to{
+                                        opacity: 1;
+                                        right: 0px;
+                                    }
+                                }
+
+                                .title_line_animate{
+                                    position: relative;
+                                    width: 0%;
+                                    right: -70%;
+                                    height: 2px;
+                                    margin: 10px 0;
+                                    background-color: #f5c029;
+                                    @media (max-width:350px) {
+                                        margin: 2px 0;
+                                    }
+                                }
+                                .title_line_animate.act{
+                                    animation: title_line_animate 1s  ease-in-out forwards 2s; 
+                                }
+                                @keyframes title_line_animate {
+                                    from{
+                                        width: 0;
+                                        right: -70%;
+                                    }
+                                    to{
+                                        width: 70%;
+                                        right: 0;
+                                    }
+                                }
+                                .info{
+                                    position: relative;
+                                    opacity: 0;
+                                    right: 40px;
+                                    width: 50%;
+                                    height: 63px;
+                                    font-size: 17px;
+                                    padding-top: 0.5em;
+                                }
+                                .info.act{
+                                    animation: info 1s ease-in-out forwards 2.7s;
+                                }
+                                @keyframes info {
+                                    form{
+                                        opacity: 0;
+                                        right: 40px;
+                                    }
+                                    to{
+                                        opacity: 1;
+                                        right: 0;
+                                    }
+                                }
+
+                            }
+                        }
+
+                        
+
+
+                        .intro_drink_background{
+                            position: absolute;
+                            width: 50%;
+                            bottom: 0;
+                            right: 0;
+                          
+                            svg{
+                                .svg_circle{
+                                    transform: matrix(0.001,0,0,0.001,380,380);
+                                }
+                                .svg_circle.act{
+                                    animation: section6_circle 1s linear forwards;
+                                }
+                                @keyframes section6_circle {
+                                    from{
+                                        transform: matrix(0.001,0,0,0.001,380,380);
+                                    }
+                                    to{
+                                        transform: matrix(1,0,0,1,0,0);
+                                    }
+                                }
+                                .svg_line{
+                                    fill: none;
+                                    stroke: #FFFFFF;
+                                    stroke-miterlimit: 10; 
+                                    stroke-width: 1.5;
+                                }
+                                .svg_line1{
+                                    stroke-dasharray: 1630px;
+                                    stroke-dashoffset: 1630px;
+                                }
+                                .svg_line1.act{
+                                    animation: section6_line1 1.2s linear forwards 0.8s;
+                                }
+                                @keyframes section6_line1 {
+                                    from{
+                                        stroke-dashoffset: 1630px;
+                                    }
+                                    to{
+                                        stroke-dashoffset: 0px;
+                                    }
+                                }
+                                .svg_line1-2{
+                                    stroke-dasharray: 370px;
+                                    stroke-dashoffset:370px ;
+                                }
+                                .svg_line1-2.act{
+                                    animation: section6_line1_2 0.3s linear forwards 2s ;
+                                }
+                                @keyframes section6_line1_2 {
+                                    from{
+                                     
+                                        stroke-dashoffset:370px ;
+                                    }
+                                    to{
+                                      
+                                        stroke-dashoffset: 0px;
+                                    }
+                                }
+                                .svg_line2{
+                                    stroke-dasharray: 660px;
+                                    stroke-dashoffset: 660px;
+                                }
+                                .svg_line2.act{
+                                    animation: section6_line2 0.6s linear forwards 0.8s;
+                                }
+                                @keyframes section6_line2 {
+                                    from{
+                                        stroke-dashoffset: 660px;
+                                    }
+                                    to{
+                                        stroke-dashoffset: 0px;
+                                    }
+                                }
+                                .svg_line2-2{
+                                    stroke-dasharray: 780px;
+                                    stroke-dashoffset: 780px;
+                                    
+                                }
+                                .svg_line2-2.act{
+                                    animation: section6_line2-2 0.6s linear forwards 1.4s;
+                                }
+                                @keyframes  section6_line2-2 {
+                                    from{
+                                        stroke-dashoffset: 780px;
+                                    }
+                                    to{
+                                        stroke-dashoffset: 0px;
+                                    }
+                                }
+                            }
+                        }
+
+
+                        .intro_drink{
+                            position: absolute;
+                            width: 50%;
+                            bottom: 25%;
+                            right: 0;
+                            text-align: center;
+                            transform: translate(-25px);
+                            opacity: 0;
+                            @media (max-width:767px) {
+                                bottom: 40%;
+                            }
+                            img{
+                                width: 50%;
+                                user-select: none;
+                            }
+                        }
+                        .intro_drink.act{
+                            animation: intro_drink 1s ease-in-out forwards;
+                        }
+                        @keyframes intro_drink {
+                            form{
+                                opacity: 0;
+                                transform: translate(-25px);
+                            }
+                            to{
+                                opacity: 1;
+                                transform: translate(0);
+                            }
+                        }
+
+                        .intro_drink_text_wrap.act{
+                            animation: intro_drink 1s ease-in-out forwards;
+                        }
+                        .intro_drink_text_wrap{
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: 50%;
+                            height: 25%;
+                            text-align: center;
+                            transform: translate(-25px);
+                            opacity: 0;
+                           @media (max-width:767px) {
+                            bottom: 16%;
+                           }
+                            .intro_drink_text{
+                                color: #FFFFFF;
+                                font-size: 1.05em;
+                                @media (max-width:767px) {
+                                    display: none;
+                                }
+                            }
+                            .intro_drink_text_separate{
+                                height: 25px;
+                                @media (max-width:767px) {
+                                    display: none;
+                                }
+                            }
+                            .drink_link{
+                                display: inline-block;
+                                color: #FFFFFF;
+                                width: 60px;
+                                height: 60px;
+                                line-height: 60px;
+                                border-radius: 50%;
+                                background-color: #f5c029;
+                            }
+                        }
+
+
+                        .intro_content_separate{
+                            display: block;
+                            padding-top: 650px;
+                            @media (max-width:1200px) {
+                                padding-top: 535.96px;
+                            }
+                            @media (max-width:990px) {
+                                padding-top: 410.526px;
+                            }
+                            @media (max-width:767px) {
+                                padding-top: 51.017vw;
+                            }
+                        }
+                        .slider_container6{
+                            width: 40%;
+                            height: 256px;
+                            position: relative;
+                            // border: 1px solid red;
+                            @media (max-width:767px){
+                                display: none;
+                                
+                            }
+                            
+                            div{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                overflow: hidden;
+                                // border: 1px blue solid;
+                                .slider6{
+                                    position: absolute;
+                                    width: 140px;
+                                    height: 90%;
+                                    top: 5%;
+                                    z-index: 2;
+                                    cursor: pointer;
+                                   @media (max-width:1200px) {
+                                        width: 96px;
+                                        top: 15%;
+                                   }
+                                    
+                                    @media (max-width:990px) {
+                                        width: 76px;
+                                        top: 21%;
+                                    }
+                                   .slider6_drink{
+                                        width: 100%;
+                                        position: relative;
+                                        user-select: none;
+                                       
+                                   }
+                                   
+                                }
+                               
+
+
+                                .slider6_0{
+                                    transition: 0.3s;
+                                    transform: translate(-140px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(-96px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(-76px);
+                                    }
+                                }
+                                .slider6_0:hover{
+                                    transition: 0.3s;
+                                    top: -5%;
+                                }
+
+                                .slider6_1{
+                                    transition: 0.3s;
+                                    transform: translate(12px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(24.5px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(17.5px);
+                                    }
+                                }
+                                .slider6_1:hover{
+                                    transition: 0.3s;
+                                    top: -5%;
+                                    @media (max-width:990px) {
+                                        top: 10%;
+                                    }
+                                }
+
+                                .slider6_2{
+                                    transition: 0.3s;
+                                    transform: translate(164px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(145px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(111px);
+                                    }
+                                }
+                                .slider6_2:hover{
+                                    transition: 0.3s;
+                                    top: -5%;
+                                    @media (max-width:990px) {
+                                        top: 10%;
+                                    }
+                                }
+
+                                .slider6_3{
+                                    transition: 0.3s;
+                                    transform: translate(316px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(265.5px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(204.5px);
+                                    }
+                                }
+                                .slider6_3:hover{
+                                    transition: 0.3s;
+                                    top: -5%;
+                                    @media (max-width:990px) {
+                                        top: 10%;
+                                    }
+                                }
+
+                                .slider6_4{
+                                    transition: 0.3s;
+                                    transform: translate(468px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(386.5px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(298.5px);
+                                    }
+                                }
+                                .slider6_4:hover{
+                                    transition: 0.3s;
+                                    top: -5%;
+                                    @media (max-width:990px) {
+                                        top: 10%;
+                                    }
+                                }
+
+
+
+                                
+                               
+                               
+                                
+                 
+                               
+                                // 右邊按鈕
+                                @media (min-width:1201px) {
+                                    @keyframes slider6_0_left {
+                                        from{
+                                            transform: translate(-140px);
+                                        }
+                                        to{
+                                            transform: translate(-140px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:1200px) {
+                                    @keyframes slider6_0_left {
+                                        from{
+                                            transform: translate(-96px);
+                                        }
+                                        to{
+                                            transform: translate(-96px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px) {
+                                    @keyframes slider6_0_left {
+                                        from{
+                                            transform: translate(-76px);
+                                        }
+                                        to{
+                                            transform: translate(-76px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px) {
+                                    @keyframes slider6_0_left {
+                                        from{
+                                            transform: translate(-100%);
+                                        }
+                                        to{
+                                            transform: translate(-100%);
+                                        }
+                                    }
+                                }
+
+                                
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_1_left {
+                                        from{
+                                            transform: translate(12px);
+                                        }
+                                        to{
+                                            transform: translate(-140px);
+                                        }
+                                    }
+                                } 
+                                @media (max-width:1200px) {
+                                    @keyframes slider6_1_left {
+                                        from{
+                                            transform: translate(24.5px);
+                                        }
+                                        to{
+                                            transform: translate(-96px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_1_left {
+                                        from{
+                                            transform: translate(17.5px);
+                                        }
+                                        to{
+                                            transform: translate(-76px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px) {
+                                    @keyframes slider6_1_left {
+                                        from{
+                                            transform: translate(0);
+                                        }
+                                        to{
+                                            transform: translate(-100%);
+                                        }
+                                    }
+                                }
+                                
+
+
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_2_left {
+                                        from{
+                                            transform: translate(164px);
+                                        }
+                                        to{
+                                            transform: translate(12px);
+                                        }
+                                    }
+                                }                             
+                                @media (max-width:1200px) {
+                                    @keyframes slider6_2_left {
+                                        from{
+                                            transform: translate(145px);
+                                        }
+                                        to{
+                                            transform: translate(24.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_2_left {
+                                        from{
+                                            transform: translate(111px);
+                                        }
+                                        to{
+                                            transform: translate(17.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px) {
+                                    @keyframes slider6_2_left {
+                                        from{
+                                            transform: translate(100%);
+                                        }
+                                        to{
+                                            transform: translate(0);
+                                        }
+                                    }
+                                }
+                                
+
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_3_left {
+                                        from{
+                                            transform: translate(316px);
+                                        }
+                                        to{
+                                            transform: translate(164px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:1200px) {
+                                    @keyframes slider6_3_left {
+                                        from{
+                                            transform: translate(265.5px);
+                                        }
+                                        to{
+                                            transform: translate(145px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_3_left {
+                                        from{
+                                            transform: translate(204.5px);
+                                        }
+                                        to{
+                                            transform: translate(111px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px) {
+                                    @keyframes slider6_3_left {
+                                        from{
+                                            transform: translate(200%);
+                                        }
+                                        to{
+                                            transform: translate(100%);
+                                        }
+                                    }
+                                }
+
+                                
+
+
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_4_left {
+                                        from{
+                                            transform: translate(468px);
+                                        }
+                                        to{
+                                            transform: translate(316px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:1200px) {
+                                    @keyframes slider6_4_left {
+                                        from{
+                                            transform: translate(386.5px);
+                                        }
+                                        to{
+                                            transform: translate(265.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_4_left {
+                                        from{
+                                            transform: translate(298.5px);
+                                        }
+                                        to{
+                                            transform: translate(204.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px) {
+                                    @keyframes slider6_4_left {
+                                        from{
+                                            transform: translate(300%);
+                                        }
+                                        to{
+                                            transform: translate(200%);
+                                        }
+                                    }
+                                }
+                               
+                                
+                                // 左邊按鈕
+                                @media (min-width:1201px){
+                                    @keyframes slider6_0_right {
+                                        from{
+                                            transform: translate(-140px);
+                                        }
+                                        to{
+                                            transform: translate(12px);
+                                        }
+                                    }
+                                }      
+                                @media (max-width:1200px){
+                                    @keyframes slider6_0_right {
+                                        from{
+                                            transform: translate(-96px);
+                                        }
+                                        to{
+                                            transform: translate(24.5px);
+                                        }
+                                    }
+                                }      
+                                @media (max-width:990px){
+                                    @keyframes slider6_0_right {
+                                        from{
+                                            transform: translate(-76px);
+                                        }
+                                        to{
+                                            transform: translate(17.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px){
+                                    @keyframes slider6_0_right {
+                                        from{
+                                            transform: translate(-100%);
+                                        }
+                                        to{
+                                            transform: translate(0);
+                                        }
+                                    }
+                                }
+
+
+
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_1_right {
+                                        from{
+                                            transform: translate(12px);
+                                        }
+                                        to{
+                                            transform: translate(164px);
+                                        }
+                                    }
+                                }   
+                                @media (max-width:1200px){
+                                    @keyframes slider6_1_right {
+                                        from{
+                                            transform: translate(24.5px);
+                                        }
+                                        to{
+                                            transform: translate(145px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_1_right {
+                                        from{
+                                            transform: translate(17.5px);
+                                        }
+                                        to{
+                                            transform: translate(111px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px){
+                                    @keyframes slider6_1_right {
+                                        from{
+                                            transform: translate(0);
+                                        }
+                                        to{
+                                            transform: translate(100%);
+                                        }
+                                    }
+                                }
+
+
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_2_right {
+                                        from{
+                                            transform: translate(164px);
+                                        }
+                                        to{
+                                            transform: translate(316px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:1200px){
+                                    @keyframes slider6_2_right {
+                                        from{
+                                            transform: translate(145px);
+                                        }
+                                        to{
+                                            transform: translate(265.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_2_right {
+                                        from{
+                                            transform: translate(111px);
+                                        }
+                                        to{
+                                            transform: translate(204.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px){
+                                    @keyframes slider6_2_right {
+                                        from{
+                                            transform: translate(100%);
+                                        }
+                                        to{
+                                            transform: translate(200%);
+                                        }
+                                    }
+                                }
+                            
+
+
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_3_right {
+                                        from{
+                                            transform: translate(316px);
+                                        }
+                                        to{
+                                            transform: translate(468px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:1200px){
+                                    @keyframes slider6_3_right {
+                                        from{
+                                            transform: translate(265.5px);
+                                        }
+                                        to{
+                                            transform: translate(386.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_3_right {
+                                        from{
+                                            transform: translate(204.5px);
+                                        }
+                                        to{
+                                            transform: translate(298.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px){
+                                    @keyframes slider6_3_right {
+                                        from{
+                                            transform: translate(200%);
+                                        }
+                                        to{
+                                            transform: translate(300%);
+                                        }
+                                    }
+                                }
+
+
+
+
+                                @media (min-width:1201px){
+                                    @keyframes slider6_4_right {
+                                        from{ 
+                                            transform: translate(468px);
+                                        }
+                                        to{
+                                            transform: translate(468px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:1200px){
+                                    @keyframes slider6_4_right {
+                                        from{ 
+                                            transform: translate(386.5);
+                                        }
+                                        to{
+                                            transform: translate(386.5);
+                                        }
+                                    }
+                                }
+                                @media (max-width:990px){
+                                    @keyframes slider6_4_right {
+                                        from{
+                                            transform: translate(298.5px);
+                                        }
+                                        to{
+                                            transform: translate(298.5px);
+                                        }
+                                    }
+                                }
+                                @media (max-width:767px){
+                                    @keyframes slider6_4_right {
+                                        from{
+                                            transform: translate(300%);
+                                        }
+                                        to{
+                                            transform: translate(300%);
+                                        }
+                                    }
+                                }
+
+
+                               
+                                
+                                .slider_shadow{
+                                    position: absolute;
+                                    width: 30%;
+                                    height: 90%;
+                                    top: 5%;
+                                    z-index: 1;
+                                    @media (max-width:1200px) {
+                                        width: 96px;
+                                        top: 15%;
+                                    }
+                                    @media (max-width:990px) {
+                                        width: 76px;
+                                        top: 21%;
+                                    }
+                                    .shadow{
+                                        position: relative;
+                                        left: 5px;
+                                        bottom: -5px;
+                                        width: 100%;
+                                        
+                                    }
+                                }
+                                
+                                .shadow_0{
+                                    transform: translate(-140px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(-96px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(-76px);
+                                    }
+                                }
+                                .shadow_1{
+                                    transform: translate(12px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(24.5px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(17.5px);
+                                    }
+                                }
+                                
+                                .shadow_2{
+                                    transform: translate(164px);
+                                    @media (max-width:1200px) {
+                                        transform: translate(145px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(111px);
+                                    }
+                                }
+                                .shadow_3{
+                                    transform: translate(316px);
+                                     @media (max-width:1200px) {
+                                        transform: translate(265.5px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(204.5px);
+                                    }
+                                }
+                                .shadow_4{
+                                    transform: translate(470px);
+                                     @media (max-width:1200px) {
+                                        transform: translate(386.5px);
+                                    }
+                                    @media (max-width:990px) {
+                                        transform: translate(298.5px);
+                                    }
+                                }
+                            }
+                            .slider6_btn{
+                                width: 34px;
+                                height: 34px;
+                                border-radius: 50%;
+                                background-color:rgba(0,0,0,0.5);
+                                transition: 0.5s;
+                                cursor: pointer;
+                            }
+                            .slider6_btn:hover{
+                                background-color:rgba(0,0,0,0.7);
+                            }
+                            .slider6_rigjt_btn{
+                                position: absolute;
+                                right: -18px;
+                                top: calc(50% - 17px);
+                                transform: rotate(135deg);
+                                z-index: 5;
+                            }
+                            .slider6_rigjt_btn::after{
+                               
+
+                                position: absolute;
+                                left: calc(50% - 5px);
+                                top: calc(50% - 5px);
+                                content: '';
+                                width: 10px;
+                                height: 10px;
+                                border: solid white;
+                                border-width: 2px 0 0 2px;
+                                transform: translate(-50% -50%);
+                          
+                            }
+                            .slider6_left_btn{
+                                position: absolute;
+                                left: -15px;
+                                top: calc(50% - 17px);
+                                transform: rotate(-45deg);
+                                z-index: 5;
+                                
+                            }
+                            .slider6_left_btn::after{
+                                position: absolute;
+                                left: calc(50% - 5px);
+                                top: calc(50% - 5px);
+                                content: '';
+                                width: 10px;
+                                height: 10px;
+                                border: solid white;
+                                border-width: 2px 0 0 2px;
+                                transform: translate(-50% -50%);
+                          
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider_container6_mobile{
+    display: none;
+}
+
+
+
+
+// 手機板Slider
+@media (max-width:767px) {
+    .slider_container6_mobile{
+        display: block;
+        width: 100%;
+        position: relative;
+        // border: 1px solid red;
+        box-sizing: border-box;
+        display: flex;
+        
+       
+           .slider6_mobile{
+           position: absolute;
+            cursor: pointer;
+               .mobile_drink{
+                   width: 100%;
+               }
+           }
+
+          
+    
+    
+        
+            
+
+
+
+
+        
+        .slider6_btn{
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color:rgba(0,0,0,0.5);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .slider6_btn:hover{
+            background-color:rgba(0,0,0,0.7);
+        }
+        .slider6_rigjt_btn{
+            position: absolute;
+            right: 0;
+            top: calc(50% - 17px);
+            transform: rotate(135deg);
+            z-index: 5;
+        }
+        .slider6_rigjt_btn::after{
+            position: absolute;
+            left: calc(50% - 5px);
+            top: calc(50% - 5px);
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: solid white;
+            border-width: 2px 0 0 2px;
+            transform: translate(-50% -50%);
+      
+        }
+        .slider6_left_btn{
+            position: absolute;
+            left: 0;
+            top: calc(50% - 17px);
+            transform: rotate(-45deg);
+            z-index: 5;
+            
+        }
+        .slider6_left_btn::after{
+            position: absolute;
+            left: calc(50% - 5px);
+            top: calc(50% - 5px);
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: solid white;
+            border-width: 2px 0 0 2px;
+            transform: translate(-50% -50%);
+      
+        }
+    }
+}
+
+// 手機板定位
+
+.mobile_slider6_0{
+  
+    transform: translate(-100%);
+    animation-fill-mode: forwards;
+}
+.mobile_slider6_1{
+   
+    transform: translate(0);
+    animation-fill-mode: forwards;
+}
+.mobile_slider6_2{
+  
+    transform: translate(100%);
+    animation-fill-mode: forwards;
+}
+.mobile_slider6_3{
+ 
+    transform: translate(200%);
+    animation-fill-mode: forwards;
+}
+.mobile_slider6_4{
+  
+    transform: translate(300%);
+    animation-fill-mode: forwards;
+}
+

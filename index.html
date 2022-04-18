@@ -6,15 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/burger.css">
-    <!-- <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css"> -->
-    <link rel="stylesheet" href="./css/section1-swiper.css">
-    <link rel="stylesheet" href="./css/section2-main-title.css">
-    <link rel="stylesheet" href="./css/section3-latest-news.css">
-    <link rel="stylesheet" href="./css/section4-about.css">
-    <link rel="stylesheet" href="./css/section5-earth.css">
     <style>
+        /* Molle字體link~~~~ */
+        @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+        /* Molle字體link~~~~ */
+
         body {
             margin: 0;
         }
@@ -36,6 +32,18 @@
             color: aliceblue;
         }
     </style>
+
+
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/burger.css">
+    <!-- <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="./css/section1-swiper.css">
+    <link rel="stylesheet" href="./css/section2-main-title.css">
+    <link rel="stylesheet" href="./css/section3-latest-news.css">
+    <link rel="stylesheet" href="./css/section4-about.css">
+    <link rel="stylesheet" href="./css/section5-earth.css">
+    <link rel="stylesheet" href="./css/section6_drink_intro.css">
+
 </head>
 
 <body>
@@ -178,7 +186,7 @@
             </div>
         </a>
         <a href="" class="burger-nav-item">
-            <img src="./img/navi_icon5.png" alt=LOCATION" class="burger-nav-img">
+            <img src="./img/navi_icon5.png" alt="LOCATION" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">分店資訊</div>
                 <div class="title-en">LOCATION</div>
@@ -198,6 +206,15 @@
         <section id="section1">
             <div class="container">
                 <div class="slider_container">
+
+                    <transition appear :css="false" @before-enter="beforeEnter" @enter="enterHandler"
+                        @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leaveHandler"
+                        @after-leave="afterLeave">
+                        <div class="slider" v-for="item in img4s" :key="item.id" v-if='img_number === item.id '>
+                            <span :class="item.className">{{item.content}}</span>
+
+                        </div>
+                    </transition>
                     <transition appear :css="false" @before-enter="beforeEnter" @enter="enterHandler"
                         @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leaveHandler"
                         @after-leave="afterLeave">
@@ -222,6 +239,8 @@
 
                         </div>
                     </transition>
+
+
 
                     <div class="btn-box">
                         <div class="btn next" @click="change(1)"></div>
@@ -355,7 +374,117 @@
         </section>
     </div>
 
-    <section style="width: 100%;height: 200vh;"></section>
+    <div id="app6">
+        <section>
+            <div class="into_background">
+                <div style="clear: both; height: 50px;"></div>
+                <div class="container">
+                    <div class="intro_title_bar">
+                        <div class="intro_title_wrap">
+                            <img src="./img/section6_title_drink_pattern.png" alt="drink_pattern">
+                            <div class="intro_en">MENU</div>
+                            <div class="intro_ch">飲品介紹</div>
+                        </div>
+                        <div style="clear: both; height: 50px;"></div>
+                        <div class="intro_content_wrap">
+                            <div class="intro_info_container">
+                                <div class="intro_info_wrap">
+
+                                    <div class="title_bar app6_animation act">
+                                        <img class="decorain" src="./img/section6_title_decoration.png"
+                                            alt="drink_pattern">
+                                        <div class="title">{{titleBarName}}</div>
+                                    </div>
+                                    <div class="title_line_animate app6_animation act"></div>
+                                    <div class="info app6_animation act">{{titleBarContent}}</div>
+                                </div>
+                            </div>
+
+
+                            <div class="intro_drink_background">
+                                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 760 760"
+                                    style="enable-background:new 0 0 760 760;" xml:space="preserve">
+
+                                    <image class="svg_circle app6_animation svg6 act" style="overflow:visible;"
+                                        width="745" height="746" xlink:href="../img/section6_title_black_circle.png"
+                                        transform="matrix(1 0 0 1 8 7)">
+                                    </image>
+                                    <polyline class="svg_line svg_line1 app6_animation svg6 act"
+                                        points="109,241 63,501 371,684 643,561 725,255 " />
+                                    <line class="svg_line svg_line1-2 app6_animation svg6 act" x1="380.5" y1="2"
+                                        x2="109" y2="241" />
+
+                                    <polyline class="svg_line svg_line2 app6_animation svg6 act"
+                                        points="331.2,241.4 157,345.5 99.8,500.1 260.8,729" />
+                                    <polyline class="svg_line svg_line2-2 app6_animation svg6 act"
+                                        points="534.4,710 655.4,361.3 424.6,185.6 331.2,241.4" />
+                                </svg>
+                            </div>
+                            <div class="intro_drink app6_animation act">
+                                <img :src="introDrinkSrc" alt="">
+                            </div>
+                            <div class="intro_drink_text_wrap app6_animation act">
+                                <div class="intro_drink_text">{{introDrinkText}}</div>
+                                <div class="intro_drink_text_separate"></div>
+                                <a class="drink_link" href="">more</a>
+                            </div>
+
+                            <div class="intro_content_separate"></div>
+
+
+                            <!-- slider -->
+                            <div class="slider_container6 ">
+                                <div>
+                                    <div class="slider6" :class="item.drinlClassName" v-for="item in drinks"
+                                        :key="item.drinkSrc" v-if="4 >= item.num && item.num >= 0">
+                                        <img class="slider6_drink" :src="item.drinkSrc" alt="drink"
+                                            @click="drinkHandler(item)" @mouseover="stopHandler()"
+                                            @mouseleave="startHandler()">
+                                    </div>
+                                    <div class="slider_shadow" :class="item.shadowClassName" v-for="item in drinks"
+                                        :key="item.id" v-if="4 >= item.num && item.num >= 0">
+                                        <img class="shadow" src="./img/section6_slider_shadow.png" alt="影子">
+                                    </div>
+                                </div>
+                                <div class="slider6_btn slider6_rigjt_btn" @click="numChangeHandler(-1)"></div>
+                                <div class="slider6_btn slider6_left_btn" @click="numChangeHandler(1)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 手機板slider -->
+                <div class="slider_container6_mobile">
+                    <div class="slider6_mobile" :class="item.mobileDrinkClassName" v-for="item in drinks" :key="item.drinkSrc" v-if="4 >= item.num && item.num >= 0">
+                        <img class="mobile_drink" :src="item.drinkSrc" alt="drink" @click="drinkHandler(item)" @mouseover="stopHandler()"
+                        @mouseleave="startHandler()">
+                    </div>
+                    
+                    <div class="slider6_btn slider6_rigjt_btn" @click="numChangeHandler(-1)"></div>
+                    <div class="slider6_btn slider6_left_btn" @click="numChangeHandler(1)"></div>
+                </div>
+
+
+
+
+                <!--  
+                        slider6
+                         slider6_0  to slider6_4
+                        slider_shadow
+                        shadow_0   to shadow_4
+                       
+                -->
+
+
+            </div>
+
+        </section>
+    </div>
+    <section style="width: 100%;height: 200vh;">
+
+
+    </section>
 
 
 
@@ -382,10 +511,11 @@
     <script src="./js/section3-latest-news.js"></script>
     <script src="./js/section4-about.js"></script>
     <script src="./js/section5-earth.js"></script>
-    <!-- <script src="./js/scroll.js"></script> -->
+    <script src="./js/section6.-intro.js"></script>
     <script src="./js/scroll.js"></script>
-    <script>
 
+
+    <script>
 
 
 
