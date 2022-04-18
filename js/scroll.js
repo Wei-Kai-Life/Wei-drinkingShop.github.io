@@ -189,6 +189,7 @@ var scrollHandler = function () {
     }
 
 
+    var dwidth = window.innerWidth
 
     function debounce2(fn, wait) {
         var resizeTimer = null
@@ -200,8 +201,13 @@ var scrollHandler = function () {
         }
     }
     function handle2() {
+        var wwidth = window.innerWidth
+        if(dwidth !== wwidth){
+            dwidth = wwidth
+            scrollHandler()
+        }
         // window.removeEventListener('scroll', heightFilter)
-        scrollHandler()
+        
     }
 
     window.addEventListener('resize', debounce2(handle2, 1000))

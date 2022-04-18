@@ -1,6 +1,7 @@
-var resizeTimer = null
+var dwidth6 = window.innerWidth
+
 function debounce(fn, wait) {
-    resizeTimer = null
+    var resizeTimer = null
     return function () {
         if (resizeTimer !== null) {
             clearTimeout(resizeTimer)
@@ -9,7 +10,13 @@ function debounce(fn, wait) {
     }
 }
 function sliderMobileWidth() {
-    window.location.reload()
+    var wwidth6 = window.innerWidth
+    if(dwidth6 !== wwidth6){
+        dwidth6 = wwidth6
+        window.location.reload()
+    }
+
+    
 }
 
 window.addEventListener('resize', debounce(sliderMobileWidth, 300))
