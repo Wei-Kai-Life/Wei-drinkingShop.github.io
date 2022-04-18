@@ -464,30 +464,32 @@ let vm6 = new Vue({
             this.introDrinkText = el.enName
             this.titleBarName = el.chName
             this.titleBarContent = el.content
-
-            document.querySelector('.title_bar').classList.remove('act')
-            document.querySelector('.title_line_animate').classList.remove('act')
-            document.querySelector('.info').classList.remove('act')
-            document.querySelector('.svg_circle').classList.remove('act')
-            document.querySelector('.svg_line1').classList.remove('act')
-            document.querySelector('.svg_line1-2').classList.remove('act')
-            document.querySelector('.svg_line2').classList.remove('act')
-            document.querySelector('.svg_line2-2').classList.remove('act')
-            document.querySelector('.intro_drink').classList.remove('act')
-            document.querySelector('.intro_drink_text_wrap').classList.remove('act')
-
-            setTimeout(() => {
-                document.querySelector('.title_bar').classList.add('act')
-                document.querySelector('.title_line_animate').classList.add('act')
-                document.querySelector('.info').classList.add('act')
-                document.querySelector('.svg_circle').classList.add('act')
-                document.querySelector('.svg_line1').classList.add('act')
-                document.querySelector('.svg_line1-2').classList.add('act')
-                document.querySelector('.svg_line2').classList.add('act')
-                document.querySelector('.svg_line2-2').classList.add('act')
-                document.querySelector('.intro_drink').classList.add('act')
-                document.querySelector('.intro_drink_text_wrap').classList.add('act')
-            }, 1)
+            if(window.innerWidth >= 767){
+                document.querySelector('.title_bar').classList.remove('act')
+                document.querySelector('.title_line_animate').classList.remove('act')
+                document.querySelector('.info').classList.remove('act')
+                document.querySelector('.svg_circle').classList.remove('act')
+                document.querySelector('.svg_line1').classList.remove('act')
+                document.querySelector('.svg_line1-2').classList.remove('act')
+                document.querySelector('.svg_line2').classList.remove('act')
+                document.querySelector('.svg_line2-2').classList.remove('act')
+                document.querySelector('.intro_drink').classList.remove('act')
+                document.querySelector('.intro_drink_text_wrap').classList.remove('act')
+    
+                setTimeout(() => {
+                    document.querySelector('.title_bar').classList.add('act')
+                    document.querySelector('.title_line_animate').classList.add('act')
+                    document.querySelector('.info').classList.add('act')
+                    document.querySelector('.svg_circle').classList.add('act')
+                    document.querySelector('.svg_line1').classList.add('act')
+                    document.querySelector('.svg_line1-2').classList.add('act')
+                    document.querySelector('.svg_line2').classList.add('act')
+                    document.querySelector('.svg_line2-2').classList.add('act')
+                    document.querySelector('.intro_drink').classList.add('act')
+                    document.querySelector('.intro_drink_text_wrap').classList.add('act')
+                }, 1)
+            }
+            
 
         }
 
