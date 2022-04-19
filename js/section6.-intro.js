@@ -13,7 +13,16 @@ function sliderMobileWidth() {
     var wwidth6 = window.innerWidth
     if(dwidth6 !== wwidth6){
         dwidth6 = wwidth6
-        window.location.reload()
+        // window.location.reload()
+        this.slider_mobile_width = document.querySelector('.slider_container6_mobile').clientWidth / 3
+        var viewDrinks = document.querySelectorAll('.slider6_mobile')
+        viewDrinks.forEach((item, index) => {
+            var viewDrink = viewDrinks[index]
+            viewDrink.style.width = `${this.slider_mobile_width}px`
+        })
+        // 抓取高度給予 slider_container6_mobile
+        var slider_container6_mobile = document.querySelector('.slider_container6_mobile')
+        slider_container6_mobile.style.height = `${document.querySelector('.mobile_drink').height}px`
     }
 
     
@@ -189,11 +198,7 @@ let vm6 = new Vue({
     el: '#app6',
     data: data6,
     mounted() {
-       
-        
         if (window.innerWidth < 767) {
-       
-
             window.onload = function () {
                 // 抓取寬度給予每一個 mobile_slider6
                 this.slider_mobile_width = document.querySelector('.slider_container6_mobile').clientWidth / 3
@@ -492,9 +497,7 @@ let vm6 = new Vue({
                     document.querySelector('.intro_drink').classList.add('act')
                     document.querySelector('.intro_drink_text_wrap').classList.add('act')
                 }, 1)
-            }
-            
-
+            }        
         }
 
     }

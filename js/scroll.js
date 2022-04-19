@@ -1,30 +1,39 @@
 // setTimeout(" console.log('對不起，要你久候') ", 3000)
 
-
+var nav_height = document.querySelector('#header').clientHeight
+var page1_height = document.querySelector('#app2').clientHeight
+var page2_height = document.querySelector('#section2').clientHeight
+var page3_height = document.querySelector('#app3').clientHeight
+var page4_height = document.querySelector('#app4').clientHeight
+var page5_height = document.querySelector('#app5').clientHeight
+var page6_height = document.querySelector('#app6').clientHeight
 
 
 var scrollHandler = function () {
-    var nav_height = document.querySelector('#header').clientHeight
-    var page1_height = document.querySelector('#app2').clientHeight
-    var page2_height = document.querySelector('#section2').clientHeight
-    var page3_height = document.querySelector('#app3').clientHeight
-    var page4_height = document.querySelector('#app4').clientHeight
-    var page5_height = document.querySelector('#app5').clientHeight
-    var page6_height = document.querySelector('#app6').clientHeight
+
+    nav_height = document.querySelector('#header').clientHeight
+    page1_height = document.querySelector('#app2').clientHeight
+    page2_height = document.querySelector('#section2').clientHeight
+    page3_height = document.querySelector('#app3').clientHeight
+    page4_height = document.querySelector('#app4').clientHeight
+    page5_height = document.querySelector('#app5').clientHeight
+    page6_height = document.querySelector('#app6').clientHeight
 
 
-    // console.log(window.innerWidth);
-    // console.log('nav_height', nav_height);
-    // console.log('app2:', page1_height);
-    // console.log('section2:', page2_height);
-    // console.log('app3:', page3_height);
-    // console.log('app4:', page4_height);
-    // console.log('app5:', page5_height);
+    console.log(window.innerWidth);
+    console.log('nav_height', nav_height);
+    console.log('app2:', page1_height);
+    console.log('section2:', page2_height);
+    console.log('app3:', page3_height);
+    console.log('app4:', page4_height);
+    console.log('app5:', page5_height);
 
-
+    window.removeEventListener('scroll', heightFilter)
 
     window.addEventListener('scroll', heightFilter, false)
     function heightFilter() {
+      
+
         // 飲料intro
         if (window.innerWidth >= 767) {
             if (window.scrollY < nav_height + page1_height + page2_height + page3_height + page4_height + page5_height * 0.2) {
@@ -182,53 +191,58 @@ var scrollHandler = function () {
 
 
         // ~~~~~~~~~~~
-
-
-
-
     }
 
+    console.log('最外層 : ', dwidth);
 
-    var dwidth = window.innerWidth
+}
 
-    function debounce2(fn, wait) {
-        var resizeTimer = null
-        return function () {
-            if (resizeTimer !== null) {
-                clearTimeout(resizeTimer)
-            }
-            resizeTimer = setTimeout(fn, wait)
+
+var dwidth = window.innerWidth
+function debounce2(fn, wait) {
+    var resizeTimer = null
+    return function () {
+        if (resizeTimer !== null) {
+            clearTimeout(resizeTimer)
         }
+        clearTimeout(resizeTimer)
+        resizeTimer = setTimeout(fn, wait)
     }
-    function handle2() {
-        var wwidth = window.innerWidth
-        if(dwidth !== wwidth){
-            dwidth = wwidth
-            if(window.innerWidth < 767){
-                ($('.mobile_drink')).each(function(){
-                    $(this).bind('load',function(){
-                        scrollHandler()
-                    })
-                })
-            }else{
+}
+var abc = 0
+function handle2() {
+    var wwidth = window.innerWidth
+    if (dwidth !== wwidth) {
+        // window.removeEventListener('scroll', heightFilter)
+        dwidth = wwidth
+        console.log('內層 : ', dwidth);
+        abc += 1
+        console.log('abc', abc);
+        scrollHandler()
+    }
+}
+
+window.addEventListener('resize', debounce2(handle2, 1000))
+
+
+
+
+var loadNum = 0
+if (window.innerWidth < 767) {
+
+    ($('.mobile_drink')).each(function () {
+        $(this).bind('load', function () {
+            loadNum++
+            if (loadNum === 5) {
                 scrollHandler()
             }
-        }
-        // window.removeEventListener('scroll', heightFilter)
-        
-    }
-
-    window.addEventListener('resize', debounce2(handle2, 1000))
-}
-if(window.innerWidth < 767){
-    ($('.mobile_drink')).each(function(){
-        $(this).bind('load',function(){
-            scrollHandler()
         })
     })
-}else{
+
+} else {
     scrollHandler()
 }
+
 
 
 
