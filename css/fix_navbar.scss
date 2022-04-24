@@ -1,13 +1,16 @@
 .fix_navbar.act{
     transform: translateY(0px);
     transition: 0.5s;
+    @media (max-width:400px) {
+        transform: translateY(-10px);
+    }
 }
 .fix_navbar{
     display: none;
     width: 100%;
     height: 80px;
     position: fixed;
-    transform: translateY(-80px);
+    transform: translateY(-100px);
     transition: 0.5s;
     background-image: url("../img/head_background.jpg");
     .fixed_logo_wrap{
@@ -18,6 +21,15 @@
         left: 40px;
         img{
             display: block;
+            @media (max-width:300px) {
+                width: 120px;
+            }
+        }
+        @media (max-width:410px) {
+            left: 5px;
+        }
+        @media (max-width:300px){
+            top: 25px;
         }
     }
     .fixed_language{
@@ -31,12 +43,31 @@
         color: white;
         text-align: center;
         line-height: 45px;
+        @media (max-width:330px) {
+            top: calc(50% - 17.5px);
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 12px;
+        }
     }
     .fixed_language_ch{
         right: 160px;
+        @media (max-width:410px) {
+            right: 140px;
+        }
+        @media (max-width:330px){
+            right: 115px;
+        }
     }
     .fixed_language_en{
         right: 100px;
+        @media (max-width:410px) {
+            right: 90px;
+        }
+        @media (max-width:330px){
+            right: 75px;
+        }
     }
     @media (max-width:1400px) {
         display: block;
@@ -54,7 +85,7 @@
         // background-color: black;
         // position: absolute;
         z-index: 3;
-        transform: translateY(-700px);
+        transform: translateY(-740px);
         transition: 1s;
         padding: 20px 0 20px 0;
     }
