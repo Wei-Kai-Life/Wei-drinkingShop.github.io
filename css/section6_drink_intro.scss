@@ -63,7 +63,7 @@
                             width: 100%;
                             padding-left: 20%;
                             text-align: left;
-                            z-index: 5;
+                            z-index: 2;
                             @media (max-width:767px) {
                                 bottom: 60%;
                                 padding: 0;
@@ -1022,7 +1022,7 @@
                                 right: -18px;
                                 top: calc(50% - 17px);
                                 transform: rotate(135deg);
-                                z-index: 5;
+                                z-index: 2;
                             }
                             .slider6_rigjt_btn::after{
                                
@@ -1043,7 +1043,7 @@
                                 left: -15px;
                                 top: calc(50% - 17px);
                                 transform: rotate(-45deg);
-                                z-index: 5;
+                                z-index: 2;
                                 
                             }
                             .slider6_left_btn::after{
@@ -1091,77 +1091,76 @@
 
 .slider_container6_mobile{
     display: none;
-    @media (max-width:767px) {
-        .slider_container6_mobile{
-            display: block;
-            width: 100%;
-            position: relative;
-            // border: 1px solid red;
-            box-sizing: border-box;
-            display: flex;
-            
-           
-               .slider6_mobile{
-               position: absolute;
-                cursor: pointer;
-                   .mobile_drink{
-                       width: 100%;
-                   }
+}
+@media (max-width:767px) {
+    .slider_container6_mobile{
+        display: block;
+        width: 100%;
+        position: relative;
+        // border: 1px solid red;
+        box-sizing: border-box;
+        display: flex;
+        
+       
+           .slider6_mobile{
+           position: absolute;
+            cursor: pointer;
+               .mobile_drink{
+                   width: 100%;
                }
-            .slider6_btn{
-                width: 34px;
-                height: 34px;
-                border-radius: 50%;
-                background-color:rgba(0,0,0,0.5);
-                transition: 0.5s;
-                cursor: pointer;
-            }
-            .slider6_btn:hover{
-                background-color:rgba(0,0,0,0.7);
-            }
-            .slider6_rigjt_btn{
-                position: absolute;
-                right: 0;
-                top: calc(50% - 17px);
-                transform: rotate(135deg);
-                z-index: 5;
-            }
-            .slider6_rigjt_btn::after{
-                position: absolute;
-                left: calc(50% - 5px);
-                top: calc(50% - 5px);
-                content: '';
-                width: 10px;
-                height: 10px;
-                border: solid white;
-                border-width: 2px 0 0 2px;
-                transform: translate(-50% -50%);
-          
-            }
-            .slider6_left_btn{
-                position: absolute;
-                left: 0;
-                top: calc(50% - 17px);
-                transform: rotate(-45deg);
-                z-index: 5;
-                
-            }
-            .slider6_left_btn::after{
-                position: absolute;
-                left: calc(50% - 5px);
-                top: calc(50% - 5px);
-                content: '';
-                width: 10px;
-                height: 10px;
-                border: solid white;
-                border-width: 2px 0 0 2px;
-                transform: translate(-50% -50%);
-          
-            }
+           }
+        .slider6_btn{
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color:rgba(0,0,0,0.5);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .slider6_btn:hover{
+            background-color:rgba(0,0,0,0.7);
+        }
+        .slider6_rigjt_btn{
+            position: absolute;
+            right: 0;
+            top: calc(50% - 17px);
+            transform: rotate(135deg);
+            z-index: 2;
+        }
+        .slider6_rigjt_btn::after{
+            position: absolute;
+            left: calc(50% - 5px);
+            top: calc(50% - 5px);
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: solid white;
+            border-width: 2px 0 0 2px;
+            transform: translate(-50% -50%);
+      
+        }
+        .slider6_left_btn{
+            position: absolute;
+            left: 0;
+            top: calc(50% - 17px);
+            transform: rotate(-45deg);
+            z-index: 2;
+            
+        }
+        .slider6_left_btn::after{
+            position: absolute;
+            left: calc(50% - 5px);
+            top: calc(50% - 5px);
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: solid white;
+            border-width: 2px 0 0 2px;
+            transform: translate(-50% -50%);
+      
         }
     }
 }
-
 
 
 // 手機板定位

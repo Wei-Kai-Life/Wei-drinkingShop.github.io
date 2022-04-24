@@ -10,7 +10,7 @@
   background-size: cover;
   overflow: hidden;
   position: relative;
-  z-index: 5;
+  z-index: 2;
 }
 
 #app4 .main_about_background .main_about_decoration1 {
@@ -78,7 +78,7 @@
   padding: 0 15px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #app4 .main_about_background .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -105,7 +105,7 @@
   width: 49.5%;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #app4 .main_about_background .container .main_about_wrap {
     width: 100%;
   }
@@ -146,7 +146,7 @@
   left: -20px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #app4 .main_about_background .container .main_about_wrap .main_about_title {
     opacity: 1;
     left: 0;
@@ -184,7 +184,7 @@
   left: -20px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #app4 .main_about_background .container .main_about_wrap .main_about_content1 {
     opacity: 1;
     left: 0;
@@ -231,7 +231,7 @@
   left: -20px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #app4 .main_about_background .container .main_about_wrap .main_about_content2 {
     opacity: 1;
     left: 0;
@@ -272,7 +272,7 @@
   left: -20px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #app4 .main_about_background .container .main_about_img_wrap {
     width: 100%;
     opacity: 1;
@@ -326,6 +326,6 @@
   height: 7.1875vw;
   margin-bottom: -7vw;
   position: relative;
-  z-index: 5;
+  z-index: 2;
 }
 /*# sourceMappingURL=section4-about.css.map */

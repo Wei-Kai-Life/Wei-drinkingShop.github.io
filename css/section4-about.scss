@@ -8,7 +8,7 @@
         background-size: cover;
         overflow: hidden;
         position: relative;
-        z-index: 5;
+        z-index: 2;
         .main_about_decoration1{
             position: absolute;
             top: 50px;
@@ -64,7 +64,7 @@
             margin: auto;
             padding: 0 15px;
             // background-color: rgb(227, 223, 218);
-            @media (max-width:990px) {
+            @media (max-width:991px) {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
@@ -77,10 +77,10 @@
             .main_about_wrap{
                 // position: relative;
                 width: 49.5%;
-                @media (max-width:990px) {
+                @media (max-width:991px) {
                     width: 100%;
                 }
-                   // 螢幕寬度小於990px時，套用mobile
+                   // 螢幕寬度小於991px時，套用mobile
                 // .main_about_title.mobile{
                 //     display: inline-block;
                 //     position: relative;
@@ -107,7 +107,7 @@
                     padding: 0 10px 0 80px;
                     opacity: 0;
                     left: -20px;
-                    @media (max-width:990px) {
+                    @media (max-width:991px) {
                         opacity: 1;
                         left: 0;
                     }
@@ -132,7 +132,7 @@
                     }
                 }
     
-                   // 螢幕寬度小於990px時，套用mobile
+                   // 螢幕寬度小於991px時，套用mobile
                 // .main_about_content1.mobile{
                 //     font-size: 1.5em;
                 //     line-height: 2em;
@@ -149,7 +149,7 @@
                     opacity: 0;
                     position: relative;
                     left: -20px;
-                    @media (max-width:990px) {
+                    @media (max-width:991px) {
                         opacity: 1;
                         left: 0;
                     }
@@ -173,7 +173,7 @@
                     
                 }
     
-                // 螢幕寬度小於990px時，套用mobile
+                // 螢幕寬度小於991px時，套用mobile
                 // .main_about_content2.mobile{
                 //     font-size: 17px;
                 //     line-height: 2em;
@@ -188,7 +188,7 @@
                     opacity: 0;
                     position: relative;
                     left: -20px;
-                    @media (max-width:990px) {
+                    @media (max-width:991px) {
                         opacity: 1;
                         left: 0;
                     }
@@ -207,7 +207,7 @@
                         }
                     }
             }
-            // 螢幕寬度小於990px時，套用mobile
+            // 螢幕寬度小於991px時，套用mobile
             // .main_about_img_wrap.mobile{
             //     width: 100%;
             //     opacity: 1;
@@ -220,7 +220,7 @@
                 position: relative;
                 opacity: 0;
                 left: -20px;
-                @media (max-width:990px) {
+                @media (max-width:991px) {
                     width: 100%;
                     opacity: 1;
                     left: 0;
@@ -255,7 +255,7 @@
         height: 7.1875vw;
         margin-bottom: -7vw;
         position: relative;
-        z-index: 5;
+        z-index: 2;
     }
 }
 

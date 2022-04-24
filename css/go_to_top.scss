@@ -1,0 +1,76 @@
+.go_to_top{
+    cursor: pointer;
+    .to_top_img{
+        transform-origin: 38.5px 142px;
+        transform: rotate(0deg);
+        width: 77px;
+        height: 142px;
+        position: fixed;
+        z-index: 6;
+        bottom: 85px;
+        right: 45px;
+        @media (max-width:767px) {
+            transform-origin: 19px 71px;
+            width: 38px;
+            height: 71px;
+            right: 57px; 
+        }
+        @media (max-width:650px) {
+            bottom: 110px;
+            right: 38px;
+        }
+    }
+    .background_circle{
+        box-sizing: border-box;
+        position: fixed;
+        z-index: 5;
+        width: 60px;
+        height: 60px;
+        background-color: #f5c029;
+        border-radius: 50%;
+        padding: 5px;
+        bottom: 50px;
+        right: 40px;
+        @media (max-width:650px) {
+            bottom: 70px;
+            right: 20px;
+        }
+        .white_line_clicle{
+            box-sizing: border-box;
+            position: relative;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: #FFF solid 1px;
+            top: -2px;
+            left: -2px;
+            line-height: 55px;
+            text-align: center;
+            @media (max-width:767px){
+                left: -2.5px;
+            }
+        }
+    }
+}
+.go_to_top:hover .to_top_img{
+    animation: to_top_img_shake 1.5s infinite linear;
+}
+@keyframes to_top_img_shake {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    70%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+// @media (max-width:767px){
+//     .go_to_top:hover .to_top_img{
+//         animation: to_top_img_shake1 1.5s infinite linear;
+//     }
+// }

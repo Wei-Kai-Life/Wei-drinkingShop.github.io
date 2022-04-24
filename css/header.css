@@ -253,12 +253,12 @@
   }
 }
 
-.brand-1300px {
+.brand-1400px {
   display: none;
 }
 
 @media (max-width: 1400px) {
-  .brand-1300px {
+  .brand-1400px {
     display: inline-block;
     position: absolute;
     left: 10px;
@@ -266,13 +266,13 @@
 }
 
 @media (max-width: 400px) {
-  .brand-1300px img {
+  .brand-1400px img {
     width: 120px;
   }
 }
 
 @media (max-width: 320px) {
-  .brand-1300px img {
+  .brand-1400px img {
     width: 80px;
   }
 }
@@ -339,11 +339,5 @@
 .burger-nav.open {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-}
-
-.aa {
-  width: 100%;
-  height: 1300px;
-  background-color: wheat;
 }
 /*# sourceMappingURL=header.css.map */

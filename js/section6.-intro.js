@@ -213,8 +213,6 @@ let vm6 = new Vue({
             }
 
 
-
-
             // this.slider_mobile_width = document.querySelector('.slider_container6_mobile').clientWidth/3
 
             // var slider_container6_mobile = document.querySelector('.slider_container6_mobile')
@@ -227,6 +225,8 @@ let vm6 = new Vue({
             // })
             // console.log(document.querySelector('.mobile_slider6_1').style.width);
 
+        }else{
+            // console.log(34);
         }
         this.auto()
     },
@@ -435,7 +435,7 @@ let vm6 = new Vue({
                         this.drinks[index].num = this.countedNum
                         this.drinks[index].drinlClassName = `slider6_${this.countedNum}`
                         this.drinks[index].mobileDrinkClassName = `slider6_mobile mobile_slider6_${this.countedNum}`
-                        // this.drinks[index].shadowClassName = `shadow_${this.countedNum}`
+                        this.drinks[index].shadowClassName = `shadow_${this.countedNum}`
                     })
 
 

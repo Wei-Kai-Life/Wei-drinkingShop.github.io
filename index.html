@@ -9,13 +9,19 @@
     <style>
         /* Molle字體link~~~~ */
         @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+
         /* Molle字體link~~~~ */
 
+
+        html{
+            scroll-behavior: smooth;
+        }
         body {
             margin: 0;
         }
 
         a {
+            color: #000;
             text-decoration: none;
         }
 
@@ -32,10 +38,16 @@
             color: aliceblue;
         }
     </style>
+    <!-- Font Awesome 圖示icon載入-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    </link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </link>
 
-
+    <link rel="stylesheet" href="./css/go_to_top.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/burger.css">
+    <link rel="stylesheet" href="./css/fix_navbar.css">
     <!-- <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="./css/section1-swiper.css">
     <link rel="stylesheet" href="./css/section2-main-title.css">
@@ -43,44 +55,57 @@
     <link rel="stylesheet" href="./css/section4-about.css">
     <link rel="stylesheet" href="./css/section5-earth.css">
     <link rel="stylesheet" href="./css/section6_drink_intro.css">
-
+    <link rel="stylesheet" href="./css/section7.css">
+    <link rel="stylesheet" href="./css/section8.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
-    <div id="app">
+    <!-- <div id="app">
         <div class="scrolled">ScrollY : {{scrolled}}</div>
+    </div> -->
+    <div id="app">
+        <div class="scrolled"></div>
     </div>
-
-
-
+    <div id="top"></div>
+    <a href="#">
+        <div class="go_to_top">
+            <img class="to_top_img" src="./img/go__to_top.png" alt="to_top_img">
+            <div class="background_circle">
+                <div class="white_line_clicle">
+                    Go Top
+                </div>
+            </div>
+        </div>
+    </a>
     <header id="header">
         <!-- 1.大於1300px時顯示 -->
         <div class="nav-bar">
-            <a href="" class="brand">
+            <a href="javascript:;" class="brand">
                 <img src="./img/head_icon.png" alt="The brand of the store">
             </a>
-            <a href="" class="nav-item">
+            <a href="javascript:;" class="nav-item">
                 <img src="./img/navi_icon1.png" alt="About us" class="nav-img">
                 <div class="title-box">
                     <div class="title">關於我們</div>
                     <div class="title-en">ABOUT US</div>
                 </div>
             </a>
-            <a href="" class="nav-item">
+            <a href="javascript:;" class="nav-item">
                 <img src="./img/navi_icon2.png" alt="Latest news" class="nav-img">
                 <div class="title-box">
                     <div class="title">最新消息</div>
                     <div class="title-en">NEWS</div>
                 </div>
             </a>
-            <a href="" class="nav-item">
+            <a href="javascript:;" class="nav-item">
                 <img src="./img/navi_icon3.png" alt="Introduce of drinks" class="nav-img">
                 <div class="title-box">
                     <div class="title">茶飲介紹</div>
                     <div class="title-en">MENU</div>
                 </div>
             </a>
-            <a href="" class="nav-item">
+            <a href="javascript:;" class="nav-item">
                 <img src="./img/navi_icon4.png" alt="Introduction to franchise" class="nav-img">
                 <div class="title-box">
                     <div class="title">加盟簡介</div>
@@ -88,7 +113,7 @@
                 </div>
 
             </a>
-            <a href="" class="nav-item">
+            <a href="javascript:;" class="nav-item">
                 <img src="./img/navi_icon5.png" alt="Branch Information" class="nav-img">
                 <div class="title-box">
                     <div class="title">分店資訊</div>
@@ -96,7 +121,7 @@
                 </div>
 
             </a>
-            <a href="" class="nav-item">
+            <a href="javascript:;" class="nav-item">
                 <img src="./img/navi_icon6.png" alt="Contact us" class="nav-img">
                 <div class="title-box">
                     <div class="title">聯絡我們</div>
@@ -106,10 +131,10 @@
         </div>
 
 
-        <!-- 2.螢幕寬度<1300px時顯示 -->
+        <!-- 2.螢幕寬度<1400px時顯示 -->
         <!-- 2.1品牌img -->
-        <a href="#" class="brand-1300px">
-            <img src="./img/head_icon.png" alt="">
+        <a href="javascript:;" class="brand-1400px">
+            <img src="./img/head_icon.png" alt="logo">
         </a>
         <!-- 2.2漢堡條 -->
         <div id="hamburger" class="hamburglar is-closed">
@@ -148,51 +173,149 @@
         <div class="language chinese">中文</div>
         <div class="language english">EN</div>
 
+        
+
+        <!-- 固定navbar -->
+        <div class="fix_navbar">
+            <a href="javascript:;" class="fixed_logo_wrap">
+                <img src="./img/fixed_narbar_brand.png" alt="logo">
+            </a>
+            <div class="fixed_language fixed_language_ch">中文</div>
+            <div class="fixed_language fixed_language_en">EN</div>
+
+            <!-- 固定漢堡條 -->
+            <div id="fixed_hamburger" class="fixed_hamburglar is-closed">
+
+                <div class="burger-icon">
+                    <div class="fixed_burger_container">
+                        <span class="burger-bun-top"></span>
+                        <span class="burger-filling"></span>
+                        <span class="burger-bun-bot"></span>
+                    </div>
+                </div>
+    
+                <!-- svg ring containter -->
+                <div class="burger-ring">
+                    <svg class="svg-ring">
+                        <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"
+                            d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                    </svg>
+                </div>
+                <!-- the masked path that animates the fill to the ring -->
+    
+                <svg width="0" height="0">
+                    <mask id="mask">
+                        <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10"
+                            stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                    </mask>
+                </svg>
+                <div class="path-burger">
+                    <div class="animate-path">
+                        <div class="path-rotation"></div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
     </header>
     <div class="burger-nav">
-        <a href="" class="burger-nav-item">
+        <a href="javascript:;" class="burger-nav-item">
             <img src="./img/navi_icon6.png" alt="HOME" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">首頁</div>
                 <div class="title-en">HOME</div>
             </div>
         </a>
-        <a href="" class="burger-nav-item">
+        <a href="javascript:;" class="burger-nav-item">
             <img src="./img/navi_icon1.png" alt="About us" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">關於我們</div>
                 <div class="title-en">ABOUT US</div>
             </div>
         </a>
-        <a href="" class="burger-nav-item">
+        <a href="javascript:;" class="burger-nav-item">
             <img src="./img/navi_icon2.png" alt="NEWS" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">最新消息</div>
                 <div class="title-en">NEWS</div>
             </div>
         </a>
-        <a href="" class="burger-nav-item">
+        <a href="javascript:;" class="burger-nav-item">
             <img src="./img/navi_icon3.png" alt="MENU" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">茶飲介紹</div>
                 <div class="title-en">MENU</div>
             </div>
         </a>
-        <a href="" class="burger-nav-item">
+        <a href="javascript:;" class="burger-nav-item">
             <img src="./img/navi_icon4.png" alt="AFFILIATE" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">加盟簡介</div>
                 <div class="title-en">AFFILIATE</div>
             </div>
         </a>
-        <a href="" class="burger-nav-item">
+        <a href="javascript:;" class="burger-nav-item">
             <img src="./img/navi_icon5.png" alt="LOCATION" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">分店資訊</div>
                 <div class="title-en">LOCATION</div>
             </div>
         </a>
-        <a href="" class="burger-nav-item">
+        <a href="javascript:;" class="burger-nav-item">
+            <img src="./img/navi_icon6.png" alt="CONTACT" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">聯絡我們</div>
+                <div class="title-en">CONTACT</div>
+            </div>
+        </a>
+    </div>
+
+
+    <!-- 固定nav_container -->
+    <div class="fixed_burger_nav">
+        <a href="javascript:;" class="burger-nav-item">
+            <img src="./img/navi_icon6.png" alt="HOME" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">首頁</div>
+                <div class="title-en">HOME</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="burger-nav-item">
+            <img src="./img/navi_icon1.png" alt="About us" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">關於我們</div>
+                <div class="title-en">ABOUT US</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="burger-nav-item">
+            <img src="./img/navi_icon2.png" alt="NEWS" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">最新消息</div>
+                <div class="title-en">NEWS</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="burger-nav-item">
+            <img src="./img/navi_icon3.png" alt="MENU" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">茶飲介紹</div>
+                <div class="title-en">MENU</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="burger-nav-item">
+            <img src="./img/navi_icon4.png" alt="AFFILIATE" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">加盟簡介</div>
+                <div class="title-en">AFFILIATE</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="burger-nav-item">
+            <img src="./img/navi_icon5.png" alt="LOCATION" class="burger-nav-img">
+            <div class="title-box">
+                <div class="title">分店資訊</div>
+                <div class="title-en">LOCATION</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="burger-nav-item">
             <img src="./img/navi_icon6.png" alt="CONTACT" class="burger-nav-img">
             <div class="title-box">
                 <div class="title">聯絡我們</div>
@@ -427,7 +550,7 @@
                             <div class="intro_drink_text_wrap app6_animation act">
                                 <div class="intro_drink_text">{{introDrinkText}}</div>
                                 <div class="intro_drink_text_separate"></div>
-                                <a class="drink_link" href="">more</a>
+                                <a class="drink_link" href="javascript:;">more</a>
                             </div>
 
                             <div class="intro_content_separate"></div>
@@ -456,35 +579,161 @@
 
                 <!-- 手機板slider -->
                 <div class="slider_container6_mobile">
-                    <div class="slider6_mobile" :class="item.mobileDrinkClassName" v-for="item in drinks" :key="item.drinkSrc" v-if="4 >= item.num && item.num >= 0">
-                        <img class="mobile_drink" :src="item.drinkSrc" alt="drink" @click="drinkHandler(item)" @mouseover="stopHandler()"
-                        @mouseleave="startHandler()">
+                    <div class="slider6_mobile" :class="item.mobileDrinkClassName" v-for="item in drinks"
+                        :key="item.drinkSrc" v-if="4 >= item.num && item.num >= 0">
+                        <img class="mobile_drink" :src="item.drinkSrc" alt="drink" @click="drinkHandler(item)"
+                            @mouseover="stopHandler()" @mouseleave="startHandler()">
                     </div>
-                    
+
                     <div class="slider6_btn slider6_rigjt_btn" @click="numChangeHandler(-1)"></div>
                     <div class="slider6_btn slider6_left_btn" @click="numChangeHandler(1)"></div>
                 </div>
-
-
-
-
-                <!--  
-                        slider6
-                         slider6_0  to slider6_4
-                        slider_shadow
-                        shadow_0   to shadow_4
-                       
-                -->
-
-
             </div>
 
         </section>
     </div>
-    <section style="width: 100%;height: 200vh;">
 
 
-    </section>
+
+    <div id="app7">
+        <section class="section7">
+            <div class="container7">
+                <div class="picture7-space">
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <transition appear :css="false" @before-enter="beforeEnter" @enter="enterHandler"
+                        @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leaveHandler"
+                        @after-leave="afterLeave">
+
+                        <img class="picture7" v-for="item in imgs" :src="item.src" v-if='img_number === item.id'
+                            :key="item.src" alt="大海報" @mouseover="stopHandler()" @mouseleave="startHandler()">
+
+                    </transition>
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="svg7">
+                        <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 169 169"
+                            style="enable-background:new 0 0 169 169;" xml:space="preserve">
+
+                            <circle class="st0 circle7" cx="84.5" cy="84.5" r="83" />
+                            <line class="st0 line7" x1="143.7" y1="142.6" x2="42.3" y2="43.5" />
+                        </svg>
+                        <div class="num1">{{num1}}</div>
+                        <div class="num2">{{num2}}</div>
+                    </div>
+
+                </div>
+                <div class="text7-space">
+                    <div class="text7-container">
+                        <div class="text7-wrap">
+                            <div class="text7-1 app7_animation">{{text7_1}}</div>
+                            <div class="text7-2 app7_animation">{{text7_2}}</div>
+                            <div class="text7-3 app7_animation">{{text7_3}}</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom-background7"></div>
+        </section>
+    </div>
+
+    <div id="app8">
+        <section class="section8">
+            <div class="worldBackground_container">
+                <div class="worldBackground">
+                    <div v-for="(item,index) in worldDots" class="world_dot" :class="item.className">
+                        <div class="small-circle">
+                            <span></span>
+                        </div>
+                        <svg class="svg8" version="1.1" pointer-events="none">
+                            <!-- 第一個小圈圈 -->
+                            <circle class="circle" cx="50%" cy="50%" fill-opacity="0" stroke="black" stroke-width="7px">
+                                <animate attributeName="r" from="10" to="70" dur="4s" repeatCount="indefinite" />
+                            </circle>
+                            <!-- 第二個小圈圈 -->
+                            <circle class="circle2" cx="50%" cy="50%" fill-opacity="0" stroke="black"
+                                stroke-width="7px">
+                                <animate attributeName="r" from="10" to="70" dur="4s" repeatCount="indefinite"
+                                    begin="2s" />
+                            </circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 50px;"></div>
+            <div class="container8">
+                <div class="title_wrap">
+                    <img class="title animation8" src="./img/section8_title.png" alt="title">
+                </div>
+                <div style="height: 25px;"></div>
+                <div class="icon_wrap">
+                    <img class="icon animation8" src="./img/section8_grass.png" alt="icon">
+                </div>
+                <div style="height: 25px;"></div>
+                <div class="content_wrap">
+                    <div class="content_text animation8">從台灣到世界，飲品時尚達人阿偉為您準備了絕佳的創業舞台，與您一同打造未來，
+                        加盟展圓夢專案優惠中。</div>
+                    <div class="title_wrap animation8">
+                        <div class="title_en">a~we</div>
+                        <div class="title_ch">Bubble Z 夢想加入</div>
+                    </div>
+                </div>
+                <div style="height: 50px;"></div>
+                <div class="join_btn_wrap">
+                    <a class="join_btn join_btn_left animation8" href="javascript:;">
+                        <i class="fa-solid fa-shop" id="icon8_left"></i>
+                        <span id="text8_left">分店資訊</span>
+                    </a>
+                    <a class="join_btn join_btn_right animation8" href="javascript:;">
+                        <i class="fa-solid fa-handshake-simple" id="icon8_right"></i>
+                        <span id="text8_right">加入我們</span>
+                    </a>
+                </div>
+            </div>
+            <div style="height: 50px;"></div>
+        </section>
+    </div>
+
+
+    <footer class="footer_section">
+        <div class="container">
+            <div class="footer_icon_wrap">
+                <a href="javascript:;">
+                    <img src="./img/footer_logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="footer_content_wrap">
+                <a href="javascript:;">電話 : +886-X-OOXXOOXX</a>
+                <a>傳真 : +886-O-XXOOXXOO</a>
+                <a href="javascript:;">地址 : 404 台中市自治區天堂路1段33號</a>
+                <div style="height: 5px;"></div>
+                <a href="javascript:;">
+                    <span class="fa-stack fa-2x" id="footer_facebook_icon">
+                        <i class="fa fa1 fa-square fa-stack-2x" style="color: #3B5998;"></i>
+                        <i class="fa fa-facebook fa-stack-1x" style="color: #fff;"></i>
+                    </span>
+                    <span>BubbleZ總店粉絲專頁</span>
+                </a>
+            </div>
+
+            <div class="footer_bottom_wrap">
+                <div class="foot_bottom_text">
+                    Copyright © 2019 志晟餐飲事業有限公司 all rights reserved.
+                </div>
+                <div class="foot_geyes_link_wrap">
+                    <div class="foot_geyes_link_text">
+                        <i class="fa-solid fa-fish-fins"></i>
+                    </div>
+                    <a href="javascript:;" class="foot_geyes_link">
+                        網站設計
+                    </a>
+                    <div class="foot_geyes_link_text">
+                        · Hi數位設計
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -507,11 +756,14 @@
     <script src="./js/app.js"></script>
     <script src="./js/nav_header.js"></script>
     <script src="./js/burger&burger_nav.js"></script>
+    <script src="./js/fixed_navbar.js"></script>
     <script src="./js/section1-slider.js"></script>
     <script src="./js/section3-latest-news.js"></script>
     <script src="./js/section4-about.js"></script>
     <script src="./js/section5-earth.js"></script>
     <script src="./js/section6.-intro.js"></script>
+    <script src="./js/section7.js"></script>
+    <script src="./js/section8.js"></script>
     <script src="./js/scroll.js"></script>
 
 

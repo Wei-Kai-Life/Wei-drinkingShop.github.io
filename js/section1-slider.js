@@ -155,7 +155,6 @@ let vm2 = new Vue({
         beforeEnter(el) {
         
             // console.log('進入前');
-            $(".button_line").removeClass("active-6s")
             $(".button_line").removeClass("active")
             // 進場時的appear，之後無用處
             if (this.direction === null) {

@@ -84,7 +84,7 @@
   width: 100%;
   padding-left: 20%;
   text-align: left;
-  z-index: 5;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {
@@ -1853,7 +1853,7 @@
   top: calc(50% - 17px);
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
-  z-index: 5;
+  z-index: 2;
 }
 
 #app6 section .into_background .container .intro_title_bar .intro_content_wrap .slider_container6 .slider6_rigjt_btn::after {
@@ -1875,7 +1875,7 @@
   top: calc(50% - 17px);
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  z-index: 5;
+  z-index: 2;
 }
 
 #app6 section .into_background .container .intro_title_bar .intro_content_wrap .slider_container6 .slider6_left_btn::after {
@@ -1931,7 +1931,7 @@
     top: calc(50% - 17px);
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
-    z-index: 5;
+    z-index: 2;
   }
   .slider_container6_mobile .slider6_rigjt_btn::after {
     position: absolute;
@@ -1951,7 +1951,7 @@
     top: calc(50% - 17px);
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    z-index: 5;
+    z-index: 2;
   }
   .slider_container6_mobile .slider6_left_btn::after {
     position: absolute;

@@ -1,0 +1,118 @@
+.go_to_top {
+  cursor: pointer;
+}
+
+.go_to_top .to_top_img {
+  -webkit-transform-origin: 38.5px 142px;
+          transform-origin: 38.5px 142px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  width: 77px;
+  height: 142px;
+  position: fixed;
+  z-index: 6;
+  bottom: 85px;
+  right: 45px;
+}
+
+@media (max-width: 767px) {
+  .go_to_top .to_top_img {
+    -webkit-transform-origin: 19px 71px;
+            transform-origin: 19px 71px;
+    width: 38px;
+    height: 71px;
+    right: 57px;
+  }
+}
+
+@media (max-width: 650px) {
+  .go_to_top .to_top_img {
+    bottom: 110px;
+    right: 38px;
+  }
+}
+
+.go_to_top .background_circle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  z-index: 5;
+  width: 60px;
+  height: 60px;
+  background-color: #f5c029;
+  border-radius: 50%;
+  padding: 5px;
+  bottom: 50px;
+  right: 40px;
+}
+
+@media (max-width: 650px) {
+  .go_to_top .background_circle {
+    bottom: 70px;
+    right: 20px;
+  }
+}
+
+.go_to_top .background_circle .white_line_clicle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: #FFF solid 1px;
+  top: -2px;
+  left: -2px;
+  line-height: 55px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .go_to_top .background_circle .white_line_clicle {
+    left: -2.5px;
+  }
+}
+
+.go_to_top:hover .to_top_img {
+  -webkit-animation: to_top_img_shake 1.5s infinite linear;
+          animation: to_top_img_shake 1.5s infinite linear;
+}
+
+@-webkit-keyframes to_top_img_shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  70% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes to_top_img_shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  70% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*# sourceMappingURL=go_to_top.css.map */
