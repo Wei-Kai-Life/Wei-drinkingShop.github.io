@@ -68,8 +68,8 @@
 .section7 .container7 .picture7-space .svg7 svg .circle7 {
   -webkit-transform-origin: 84.5px 84.5px;
           transform-origin: 84.5px 84.5px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
   stroke-dasharray: 520;
   stroke-dashoffset: -520;
 }
