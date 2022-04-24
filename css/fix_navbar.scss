@@ -11,6 +11,7 @@
     height: 80px;
     position: fixed;
     transform: translateY(-100px);
+    z-index: 5;
     transition: 0.5s;
     background-image: url("../img/head_background.jpg");
     .fixed_logo_wrap{
@@ -123,7 +124,7 @@
     }
 }
 .fixed_burger_nav.open {
-    transform: translateY(-40px);
+    transform: translateY(-60px);
     
 }
 

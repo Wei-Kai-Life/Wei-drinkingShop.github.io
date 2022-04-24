@@ -19,6 +19,7 @@
   position: fixed;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
+  z-index: 5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-image: url("../img/head_background.jpg");
@@ -176,8 +177,8 @@
 }
 
 .fixed_burger_nav.open {
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
 }
 
 .fixed_hamburglar {
